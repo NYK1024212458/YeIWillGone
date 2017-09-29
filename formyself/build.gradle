@@ -1,0 +1,52 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'com.jakewharton.butterknife'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.3"
+
+
+    defaultConfig {
+        applicationId "com.kunkun.forlove.formyself"
+        minSdkVersion 15
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    testCompile 'junit:junit:4.12'
+
+    // butterknife的依赖
+    compile 'com.jakewharton:butterknife:8.5.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.5.1'
+
+    //  retrofit的依赖
+    compile 'com.squareup.retrofit2:retrofit:2.3.0'
+
+    // 关于权限的6.0
+    compile 'com.github.jokermonn:permissions4m:2.1.2-lib'
+    annotationProcessor 'com.github.jokermonn:permissions4m:2.1.2-processor'
+
+    // glide的依赖
+    compile 'com.github.bumptech.glide:glide:4.1.1'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.1.1'
+
+
+}

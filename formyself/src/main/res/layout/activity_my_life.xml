@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_my_life"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <com.kunkun.forlove.formyself.view.KunVideoView
+        android:id="@+id/kuncd_main_show"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="240dp"
+        android:layout_gravity="center_vertical"
+        android:orientation="vertical">
+        <LinearLayout
+            android:id="@+id/ll_userer"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tv_username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:text="用户名:"
+                android:textColor="#ffffff"
+                android:textSize="18sp"/>
+            <EditText
+                android:id="@+id/et_username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:hint="请输入用户名用户名:"
+                android:textColor="#ffffff"
+                android:textSize="14sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_below="@id/ll_userer"
+            android:id="@+id/ll_pwd"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tv_showpwd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:text="用户名:"
+                android:textColor="#ffffff"
+                android:textSize="18sp"/>
+            <EditText
+                android:inputType="textPassword"
+                android:id="@+id/et_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/et_username"
+                android:layout_margin="8dp"
+                android:layout_marginTop="10dp"
+                android:hint="请输入密码:"
+                android:textColor="#ffffff"
+                android:textSize="14sp"/>
+        </LinearLayout>
+
+
+
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ll_pwd"
+            android:layout_margin="8dp"
+            android:background="#0E96CA"
+            android:gravity="center"
+            android:text="登录"
+
+            android:textColor="#ffffff"
+            android:textSize="18sp"/>
+
+        <RelativeLayout
+            android:id="@+id/ll_shezhi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_login">
+
+            <Button
+                android:background="@android:color/transparent"
+                android:id="@+id/btn_fogetpwd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:text="忘记密码?"
+                android:textColor="#0E96CA"
+                android:textSize="14sp"/>
+
+            <Button
+                android:background="@android:color/transparent"
+                android:id="@+id/btn_regist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_margin="4dp"
+                android:text="新用户注册"
+                android:textColor="#0E96CA"
+                android:textSize="14sp"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textSize="14sp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="10dp"
+                android:textColor="#ffffff"
+                android:layout_marginLeft="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="点击登录就是同意marry with me!"
+                android:id="@+id/textView"/>
+        </RelativeLayout>
+
+    </FrameLayout>
+
+
+</FrameLayout>
