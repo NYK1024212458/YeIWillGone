@@ -276,6 +276,145 @@ github的地址: https://github.com/square/retrofit
           maven { url 'https://maven.google.com' }
         }
 
+ 关于Glide的快速上手的记录:
+
+ 最简单的使用就是:  Glide.with(mContext).load(ImageUrl).into(ivShowlove);
+
+ 第一个with设置的是上下文, 第二个设置的是需要加载的地址,into设置的是需要加载在什么控件上面.
+
+ 我们首先看看第一部分那就是我们需要看的with部分: 我们知道我们在with的部分设置的是一个上下文context;
+
+ with设置的上下文的部分有六种,分别是Activity和Context和Fragment和FragmentActivity和View和一个Android.APP.fragment
+ 区别在于,我们设置with之后返回的是一个RequestManager,是用来管理请求的,而是会对当前 Context 的生命周期做监听，
+ 来管理 Glide 自身的图片加载的请求。如果我们设置的上下文是当前的Activity,图片加载比较多,我们在加载的时候关闭了这个
+ Activiry,此时的glide会监听到这个页面关闭,不会再去加载这个页面的图片加载,会取消掉!
+
+  推荐的with的对象是 : Fragment > Activity > Context
+
+  看看第二大块,关于load()加载资源,可以是本地资源,也可以是网络资源和Drawable
+
+
+  第三块就是into() 加载下来的图片是设置给谁使用的!
+
+## glide的详细使用细节 ##
+
+>最长使用的是3.8.0版本的glide;
+
+glide常见的三种展位图:
+
+- placeholder ：指定加载前显示的图片资源。
+- error：指定加载失败显示的图片资源。
+- fallback：指定传递加载资源为 null 的时候，显示的图片资源。
+
+Glide.with(PictureActivity.this)
+                .load(ImageUrl)
+                .placeholder(R.mipmap.ic_launcher)
+                .error(R.mipmap.err)
+                .fallback(R.mipmap.fallback)
+                .into(ivShowlove);
+
+Glide中关于图片缩放的控制:
+
+- centerCrop()  
+- fitCenter()
+
+结果如何: 直接上图:
+
+对应的代码: 
+
+	 Glide.with(mContext)
+	                .load(BigImageUrl)
+	                .placeholder(R.mipmap.ic_launcher)
+	                .error(R.mipmap.err)
+	                .fallback(R.mipmap.fallback)
+	                .centerCrop()
+	                .into(ivShowlove);
+
+
+![](https://i.imgur.com/7fNoVqX.png)
+
+下面的对应的是: fitcenter的展示图片
+
+
+	 Glide.with(mContext)
+		                .load(BigImageUrl)
+		                .placeholder(R.mipmap.ic_launcher)
+		                .error(R.mipmap.err)
+		                .fallback(R.mipmap.fallback)
+		                .fitCenter()
+		                .into(ivShowlove);
+
+![](https://i.imgur.com/0jtn9Ny.png)
+
+
+Glide对缓冲的控制:
+
+三级缓冲: 硬盘缓冲,内存缓冲 ,网络缓冲 
+
+首先是对于内存缓冲的话:
+
+对于内存缓存而言，只有有或者没有的情况，所以 Glide 只提供了一个 skipMemoryCache() 方法，它可以传递一个 Boolean 的值，用于指定是否跳过内存，默认情况下是 false ，表示需要内存缓存。
+
+    .skipMemoryCache(true)// 设置是否跳过内存缓冲  默认是false 是不跳过内存缓冲的
+
+关于磁盘缓冲:
+
+    .diskCacheStrategy(DiskCacheStrategy.NONE) // 设置的硬盘缓冲的设置  此时是禁止使用硬盘缓冲的!
+
+    public enum DiskCacheStrategy {
+    /** Caches with both {@link #SOURCE} and {@link #RESULT}. */
+    ALL(true, true),
+    /** Saves no data to cache. */
+    NONE(false, false),
+    /** Saves just the original data to cache. */
+    SOURCE(true, false),
+    /** Saves the media item after all transformations to cache. */
+    RESULT(false, true);
+
+    private final boolean cacheSource;
+    private final boolean cacheResult;
+
+    DiskCacheStrategy(boolean cacheSource, boolean cacheResult) {
+        this.cacheSource = cacheSource;
+        this.cacheResult = cacheResult;
+    }
+
+// 具体的解释
+
+	ALL：缓存所有类型的图片（默认行为）。
+	NONE ：禁用磁盘缓存。
+	SOURCE ： 只缓存全尺寸的原图。
+	RESULT ：只缓存压缩后的图片。
+
+Glide中加载优先级
+
+>对于同一个页面，如果需要在多个地方都加载线上图片，必然会存在一个优先级的问题。例如：正常来说，背景图是比其他图片优先级更高的图片。
+
+>Glide 是可以在加载中，对当前加载的图片，调整加载的优先级的。需要使用 priority() 方法，它可以接受一个 Priority 的枚举类型，包含四种值：LOW（低）、HIGH（高）、NORMAL（普通）、IMMEDIATE（立即）。
+
+>**可以在我们需要的时候，对其进行配置，但是它并不影响用 Glide 加载的图片的显示顺序，只是用于 Glide 在加载图片的时候一个优化请求的参数而已，并不影响最终显示的顺序。**
+
+
+     Glide.with(mContext)
+                .load(BigImageUrl)    // 加载的地址
+                .placeholder(R.mipmap.ic_launcher)  //  正在加载的时候展示的图片
+                .error(R.mipmap.err)  // 加载是被的时候展示的图片
+                .fallback(R.mipmap.fallback) // 设置的是在loadURL为空的时候展示的图片
+                .centerCrop() // 设置图片的伸缩
+                .skipMemoryCache(true)// 设置是否跳过内存缓冲  默认是false 是不跳过内存缓冲的
+                .diskCacheStrategy(DiskCacheStrategy.NONE) // 设置的硬盘缓冲的设置  此时是禁止使用硬盘缓冲的!
+                .priority(Priority.HIGH) // 设置glide的请求的优先级,不会影响最后的显示的顺序
+                .into(ivShowlove);
+
+
+
+
+
+
+
+
+
+
 
 
 

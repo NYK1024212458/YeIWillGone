@@ -124,6 +124,7 @@ public class MyLifeActivity extends AppCompatActivity {
             return;
         }else {
            startActivity( new Intent(mContext,PictureActivity.class));
+            finish();
         }
 
 

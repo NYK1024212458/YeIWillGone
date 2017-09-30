@@ -2,8 +2,6 @@ package com.kunkun.forlove.formyself;
 
 import android.Manifest;
 import android.content.Context;
-import android.graphics.drawable.Drawable;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -11,7 +9,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
-import com.bumptech.glide.request.target.ImageViewTarget;
+import com.bumptech.glide.GlideBuilder;
+import com.bumptech.glide.Priority;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.joker.api.Permissions4M;
 
 import butterknife.BindView;
@@ -29,8 +29,10 @@ public class PictureActivity extends AppCompatActivity {
     ImageView ivShowlove;
 
     private Context mContext;
-
+    private String ImageUrl = "http://116.196.91.100/wordpress/wp-content/uploads/2017/09/微信图片_20170929111751.jpg";
     // 本业展示我们获取的图片设置迅雷倒计时
+
+    private  String BigImageUrl= "http://kunkun5love.com/wordpress/wp-content/uploads/2017/09/321171.jpg";
 
 
     @Override
@@ -38,17 +40,33 @@ public class PictureActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_picture);
         ButterKnife.bind(this);
+
         mContext = PictureActivity.this;
-       // checkPermisssion();
+        // checkPermisssion();
 
         // glide获取图片并加载
-            setImage();
-
-
+        setImage();
     }
 
     private void setImage() {
 
+      /*  Glide.with(PictureActivity.this)
+                .load(ImageUrl)
+                .placeholder(R.mipmap.ic_launcher)
+                .error(R.mipmap.err)
+                .fallback(R.mipmap.fallback)
+                .fitCenter()
+                .into(ivShowlove);*/
+        Glide.with(mContext)
+                .load(BigImageUrl)    // 加载的地址
+                .placeholder(R.mipmap.ic_launcher)  //  正在加载的时候展示的图片
+                .error(R.mipmap.err)  // 加载是被的时候展示的图片
+                .fallback(R.mipmap.fallback) // 设置的是在loadURL为空的时候展示的图片
+                .centerCrop() // 设置图片的伸缩
+                .skipMemoryCache(true)// 设置是否跳过内存缓冲  默认是false 是不跳过内存缓冲的
+                .diskCacheStrategy(DiskCacheStrategy.NONE) // 设置的硬盘缓冲的设置  此时是禁止使用硬盘缓冲的!
+                .priority(Priority.HIGH) // 设置glide的请求的优先级,不会影响最后的显示的顺序
+                .into(ivShowlove);
 
 
     }
@@ -62,7 +80,7 @@ public class PictureActivity extends AppCompatActivity {
                 // 权限，单权限申请仅只能填入一个
                 .requestPermissions(Manifest.permission.INTERNET)
                 // 权限码
-               // .requestCodes(AUDIO_CODE)
+                // .requestCodes(AUDIO_CODE)
                 // 如果需要使用 @PermissionNonRationale 注解的话，建议添加如下一行
 
                 // 返回的 intent 是跳转至**系统设置页面**

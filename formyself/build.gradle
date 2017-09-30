@@ -45,7 +45,7 @@ dependencies {
     annotationProcessor 'com.github.jokermonn:permissions4m:2.1.2-processor'
 
     // glide的依赖
-    compile 'com.github.bumptech.glide:glide:4.1.1'
+    compile 'com.github.bumptech.glide:glide:3.8.0'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.1.1'
 
 
