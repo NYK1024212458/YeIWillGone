@@ -406,6 +406,85 @@ Glide中加载优先级
                 .priority(Priority.HIGH) // 设置glide的请求的优先级,不会影响最后的显示的顺序
                 .into(ivShowlove);
 
+Glide的加载动画:
+
+它可以使用 crossFade() 方法进行配置，如果不特殊处理，默认它是开启的，并且本身默认动画的时长是 300ms。
+
+本身就会重载很多的方法,crossFade修改的一般是指定的是加载的动画和加载的时长,
+要是不满意动画,我们可以animate方法来加载我们的自定义的动画.
+
+        //   .crossFade(600) // 设置在加载动画的时候动画的而设置,有多个方法的重载.
+        // 默认是开启的,实质是对动画的一个加载.  我们在此的设置设置的是动画的时长是600ms
+        // .dontAnimate()  // 这都是来禁止使用动画的方法
+        //.dontTransform() // 禁止使用动画的方法
+        Glide.with(mContext)
+                .load(BigImageUrl)    // 加载的地址
+                .placeholder(R.mipmap.ic_launcher)  //  正在加载的时候展示的图片
+                .error(R.mipmap.err)  // 加载是被的时候展示的图片
+                .fallback(R.mipmap.fallback) // 设置的是在loadURL为空的时候展示的图片
+                .centerCrop() // 设置图片的伸缩
+                .skipMemoryCache(true)// 设置是否跳过内存缓冲  默认是false 是不跳过内存缓冲的
+                .diskCacheStrategy(DiskCacheStrategy.NONE) // 设置的硬盘缓冲的设置  此时是禁止使用硬盘缓冲的!
+                .priority(Priority.HIGH) // 设置glide的请求的优先级,不会影响最后的显示的顺序
+                .animate(animator)
+                .into(ivShowlove);
+
+                // 这是自定义的动画
+              ViewPropertyAnimation.Animator animator = new ViewPropertyAnimation.Animator() {
+                        @Override
+                        public void animate(View view) {
+                            view.setAlpha(0f);
+                            ObjectAnimator objectAnimator = ObjectAnimator.ofFloat(view, "alpha", 0f, 1f);
+                            objectAnimator.setDuration(2500);
+                            objectAnimator.start();
+                        }
+                    };
+
+Glide支持加载gif和视频
+
+//  gif的地址是:
+http://kunkun5love.com/wordpress/wp-content/uploads/2017/10/loadgif.gif
+
+
+我们直接来加载gif图片,也可以判断加载的是不是gif图片
+  加载的使用和加载网上的图片是一个原理,只不过我们可以使用asGif()来判断加载的是不是gif图片.
+
+  有的时候地址是一个gif地址,我们不需要他它自己播放,需要的是直接展示头一帧,我们直接使用asBitmap()来使用
+
+    Glide.with(mContext)
+                  .load(LoadGif)    // 加载的地址
+                  // .asGif()   // 判断加载的是不是gif图片
+                  .asBitmap()  // 这个方法就是在加载gif图片的时候
+                  .placeholder(R.mipmap.ic_launcher)  //  正在加载的时候展示的图片
+                  .error(R.mipmap.err)  // 加载是被的时候展示的图片
+                  .fallback(R.mipmap.fallback) // 设置的是在loadURL为空的时候展示的图片
+                  .centerCrop() // 设置图片的伸缩
+                  .skipMemoryCache(true)// 设置是否跳过内存缓冲  默认是false 是不跳过内存缓冲的
+                  .diskCacheStrategy(DiskCacheStrategy.NONE) // 设置的硬盘缓冲的设置  此时是禁止使用硬盘缓冲的!
+                  .priority(Priority.HIGH) // 设置glide的请求的优先级,不会影响最后的显示的顺序
+                  .animate(animator)
+                  .into(ivShowlove);
+
+
+glide加载视频并不是太好,注意的一点就是glide只是支持本地的视频.
+
+
+Glide对加载图片的监听:
+
+一般而言，如果我们需要监听图片加载错误的原因，可以在 onException() 中做处理。
+
+需要注意的是，这两个方法的返回值，最好都是 false，因为如果返回 true ，
+将表示你已经处理了这次的事件，而 Glide 将不会再做额外的处理。例如，如果 onException() 返回了 true 的话，在图片加载失败之后，error() 中设置的图片，
+并不会被显示，因为 Glide 认为开发者已经在外部对这个错误进行了处理。
+
+
+
+
+
+
+
+
+
 
 
 

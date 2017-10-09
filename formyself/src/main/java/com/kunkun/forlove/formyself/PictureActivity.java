@@ -1,18 +1,25 @@
 package com.kunkun.forlove.formyself;
 
 import android.Manifest;
+import android.animation.ObjectAnimator;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.GlideBuilder;
 import com.bumptech.glide.Priority;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
+import com.bumptech.glide.load.resource.drawable.GlideDrawable;
+import com.bumptech.glide.request.RequestListener;
+import com.bumptech.glide.request.animation.ViewPropertyAnimation;
+import com.bumptech.glide.request.target.Target;
 import com.joker.api.Permissions4M;
+
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -32,7 +39,10 @@ public class PictureActivity extends AppCompatActivity {
     private String ImageUrl = "http://116.196.91.100/wordpress/wp-content/uploads/2017/09/微信图片_20170929111751.jpg";
     // 本业展示我们获取的图片设置迅雷倒计时
 
-    private  String BigImageUrl= "http://kunkun5love.com/wordpress/wp-content/uploads/2017/09/321171.jpg";
+    private String BigImageUrl = "http://kunkun5love.com/wordpress/wp-content/uploads/2017/09/321171.jpg";
+
+    // 设置的是gif的图片地址
+    private String LoadGif = "http://kunkun5love.com/wordpress/wp-content/uploads/2017/10/loadgif.gif";
 
 
     @Override
@@ -57,8 +67,39 @@ public class PictureActivity extends AppCompatActivity {
                 .fallback(R.mipmap.fallback)
                 .fitCenter()
                 .into(ivShowlove);*/
+
+        // 设置我们需要的自定义的动画:
+
+        ViewPropertyAnimation.Animator animator = new ViewPropertyAnimation.Animator() {
+            @Override
+            public void animate(View view) {
+                view.setAlpha(0f);
+                ObjectAnimator objectAnimator = ObjectAnimator.ofFloat(view, "alpha", 0f, 1f);
+                objectAnimator.setDuration(2500);
+                objectAnimator.start();
+            }
+        };
+
+        //   .crossFade(600) // 设置在加载动画的时候动画的而设置,有多个方法的重载.
+        // 默认是开启的,实质是对动画的一个加载.  我们在此的设置设置的是动画的时长是600ms
+        // .dontAnimate()  // 这都是来禁止使用动画的方法
+        //.dontTransform() // 禁止使用动画的方法
+        RequestListener<? super String, GlideDrawable> loadListern = new RequestListener<String, GlideDrawable>() {
+            @Override
+            public boolean onException(Exception e, String model, Target<GlideDrawable> target, boolean isFirstResource) {
+                return false;
+            }
+
+            @Override
+            public boolean onResourceReady(GlideDrawable resource, String model, Target<GlideDrawable> target, boolean isFromMemoryCache, boolean isFirstResource) {
+                return false;
+            }
+        };
         Glide.with(mContext)
-                .load(BigImageUrl)    // 加载的地址
+                .load(LoadGif)    // 加载的地址
+                .listener(loadListern)
+                // 判断加载的是不是gif图片        .asGif()
+                //.asBitmap()  // 这个方法就是在加载gif图片的时候
                 .placeholder(R.mipmap.ic_launcher)  //  正在加载的时候展示的图片
                 .error(R.mipmap.err)  // 加载是被的时候展示的图片
                 .fallback(R.mipmap.fallback) // 设置的是在loadURL为空的时候展示的图片
@@ -66,6 +107,8 @@ public class PictureActivity extends AppCompatActivity {
                 .skipMemoryCache(true)// 设置是否跳过内存缓冲  默认是false 是不跳过内存缓冲的
                 .diskCacheStrategy(DiskCacheStrategy.NONE) // 设置的硬盘缓冲的设置  此时是禁止使用硬盘缓冲的!
                 .priority(Priority.HIGH) // 设置glide的请求的优先级,不会影响最后的显示的顺序
+                .animate(animator)
+
                 .into(ivShowlove);
 
 
