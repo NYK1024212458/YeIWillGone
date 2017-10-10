@@ -8,6 +8,7 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.view.animation.Transformation;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
@@ -95,6 +96,10 @@ public class PictureActivity extends AppCompatActivity {
                 return false;
             }
         };
+
+        Transformation transformation = new Transformation();
+        transformation.setAlpha(1);
+
         Glide.with(mContext)
                 .load(LoadGif)    // 加载的地址
                 .listener(loadListern)
@@ -108,8 +113,11 @@ public class PictureActivity extends AppCompatActivity {
                 .diskCacheStrategy(DiskCacheStrategy.NONE) // 设置的硬盘缓冲的设置  此时是禁止使用硬盘缓冲的!
                 .priority(Priority.HIGH) // 设置glide的请求的优先级,不会影响最后的显示的顺序
                 .animate(animator)
-
-                .into(ivShowlove);
+                //  .transform()
+                //  .bitmapTransform()
+                .into(ivShowlove); //  参数是imageview
+        //  .into(10,10);      // 参数是 两个int类型的数据  FutureTarget<TranscodeType>
+        // .into()  ;  //  源码如此 public <Y extends Target<TranscodeType>> Y into(Y target) {  }
 
 
     }

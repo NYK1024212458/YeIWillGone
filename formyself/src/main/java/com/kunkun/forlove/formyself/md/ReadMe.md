@@ -478,6 +478,127 @@ Glide对加载图片的监听:
 并不会被显示，因为 Glide 认为开发者已经在外部对这个错误进行了处理。
 
 
+Gliide变化加载的图片:
+
+对于使用 Glide 加载的图片，如果想要在其显示之前，对其进行一些变换操作，例如，改变颜色、虚化、圆角子类的，
+都需要用到 transfrom() 方法，它主要用于支持在图片显示之前，自定义的变换效果。
+
+               //  .transform()
+              //  .bitmapTransform()
+
+
+              关于展示图片的一些预处理的第三方库:
+              https://github.com/NYK1024212458/glide-transformations // 是fork到自己的github上的
+
+Glide 的into()的最后实现的方法:
+
+ //  .into(ivShowlove); //  参数是imageview
+        //  .into(10,10);      // 参数是 两个int类型的数据  FutureTarget<TranscodeType>
+        // .into()    //  源码如此 public <Y extends Target<TranscodeType>> Y into(Y target) {  }
+
+
+ 我们经常大部分我们还是使用泛型的方式来使用 Glide 的。(下面的是关于target的)
+
+         /**
+              * Set the target the resource will be loaded into.
+              *
+              * @see Glide#clear(com.bumptech.glide.request.target.Target)
+              *
+              * @param target The target to load the resource into.
+              * @return The given target.
+              */
+             public <Y extends Target<TranscodeType>> Y into(Y target) {
+                 Util.assertMainThread();
+                 if (target == null) {
+                     throw new IllegalArgumentException("You must pass in a non null Target");
+                 }
+                 if (!isModelSet) {
+                     throw new IllegalArgumentException("You must first set a model (try #load())");
+                 }
+
+                 Request previous = target.getRequest();
+
+                 if (previous != null) {
+                     previous.clear();
+                     requestTracker.removeRequest(previous);
+                     previous.recycle();
+                 }
+
+                 Request request = buildRequest(target);
+                 target.setRequest(request);
+                 lifecycle.addListener(target);
+                 requestTracker.runRequest(request);
+
+                 return target;
+             }
+
+  这些子类里面，有一些是不常用的，例如 AppWidgetTarget 和 NotificationTarget 就是为了 AppWidget 和 Notification 中加载图片准备的。这里只介绍两个比较常用的 Target ：SimpleTarget 和 ViewTarget ，其实使用起来都是大同小异。
+
+  如果我们不关心图片加载的用途，只是单纯的需要加载一个  Bitmap 或者 Drawable ，就可以使用 SimpleTarget 来处理。
+
+
+![](https://i.imgur.com/K8fRYE1.png)
+
+
+SimpleTarget 可以接受一个 GlideDrawable 或者 Bitmap 的类型作为加载的类型。如果需要指定加载的图片尺寸，还可以在构造方法中指定，如果不对其进行指定，则加载的是图片的原尺寸。
+
+再来看看 ViewTarget， 从名称上可以才出来，它实际上是想让 Glide 加载一个图片资源给某个 View 使用。它可以解决有时候我们显示图片的 View 并不是一个 ImageView 的问题，也可能是一个 View 的背景。
+
+
+
+
+ViewTarget 需要指定 View 的类型，以及加载的资源类型，这里直接使用的 View 和 GlideDrawable ，然后将我们需要的使用图片的目标 View 当构造参数传递进去即可，最终它它会一个内部 view 变量去持有它，供之后使用。
+
+在 onResourceReady() 这个回调方法中，直接按我们的需要使用 GlideDrawable 和 View 即可。
+
+如果是需要在非 ImageView 的其他 View 上使用图片，推荐使用 ViewTarget 。它内部是会去计算 View 的尺寸，来优化缓存的图片。和加载 ImageView 的效果是一样的，如果使用 SimpleTarget 就需要考虑到 View 的尺寸问题了。
+
+在使用 Target 的时候，还有一点需要额外注意的。
+
+前面也提到，Glide 此次加载的图片生命周期，会和 with() 传递进去的 Context 的生命周期进行绑定，所以使用 Target 加载图片的时候，就需要额外注意了，如果不是和页面绑定的图片资源，可以使用 ApplicationContext() ，避免当前页面被销毁之后，加载的请求也被停止了。
+
+
+# 我们开始集成我们需要的最好看探探模仿 #
+
+
+
+
+
+
+
+
+
+# 上传图片的模仿 #
+
+
+
+
+
+
+
+# 提交到应用市场 #
+
+
+
+
+
+
+
+# 关于自己私人的签名文档我们记录一下子: #
+
+![](https://i.imgur.com/D2phWL3.png)
+
+所有的签名文件都会在  develop 文件下面的 keystore的文件下面保存;
+
+第一个是keystore password 密码是: 经常使用的密码;
+
+第二个是 key password 是我们变换前面的 qaz之后的都是我们知道的!
+
+   
+
+
+
+
 
 
 
