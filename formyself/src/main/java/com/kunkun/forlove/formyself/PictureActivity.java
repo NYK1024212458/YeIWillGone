@@ -153,30 +153,8 @@ public class PictureActivity extends AppCompatActivity {
 
     private void setImage() {
 
-      /*  Glide.with(PictureActivity.this)
-                .load(ImageUrl)
-                .placeholder(R.mipmap.ic_launcher)
-                .error(R.mipmap.err)
-                .fallback(R.mipmap.fallback)
-                .fitCenter()
-                .into(ivShowlove);*/
+            //加载图片的监听
 
-        // 设置我们需要的自定义的动画:
-
-        ViewPropertyAnimation.Animator animator = new ViewPropertyAnimation.Animator() {
-            @Override
-            public void animate(View view) {
-                view.setAlpha(0f);
-                ObjectAnimator objectAnimator = ObjectAnimator.ofFloat(view, "alpha", 0f, 1f);
-                objectAnimator.setDuration(2500);
-                objectAnimator.start();
-            }
-        };
-
-        //   .crossFade(600) // 设置在加载动画的时候动画的而设置,有多个方法的重载.
-        // 默认是开启的,实质是对动画的一个加载.  我们在此的设置设置的是动画的时长是600ms
-        // .dontAnimate()  // 这都是来禁止使用动画的方法
-        //.dontTransform() // 禁止使用动画的方法
         RequestListener<? super String, GlideDrawable> loadListern = new RequestListener<String, GlideDrawable>() {
             @Override
             public boolean onException(Exception e, String model, Target<GlideDrawable> target, boolean isFirstResource) {
@@ -198,8 +176,36 @@ public class PictureActivity extends AppCompatActivity {
             }
         };
 
+        Glide.with(PictureActivity.this)
+                .load(ImageUrl)
+                .placeholder(R.mipmap.ic_launcher)
+                .error(R.mipmap.err)
+                .fallback(R.mipmap.fallback)
+                .listener(loadListern)
+                .fitCenter()
+                .into(ivShowlove);
+
+        // 设置我们需要的自定义的动画:
+
+        ViewPropertyAnimation.Animator animator = new ViewPropertyAnimation.Animator() {
+            @Override
+            public void animate(View view) {
+                view.setAlpha(0f);
+                ObjectAnimator objectAnimator = ObjectAnimator.ofFloat(view, "alpha", 0f, 1f);
+                objectAnimator.setDuration(2500);
+                objectAnimator.start();
+            }
+        };
+
+        //   .crossFade(600) // 设置在加载动画的时候动画的而设置,有多个方法的重载.
+        // 默认是开启的,实质是对动画的一个加载.  我们在此的设置设置的是动画的时长是600ms
+        // .dontAnimate()  // 这都是来禁止使用动画的方法
+        //.dontTransform() // 禁止使用动画的方法
+
+
         Transformation transformation = new Transformation();
         transformation.setAlpha(1);
+/*
 
         Glide.with(mContext)
                 .load(LoadGif)    // 加载的地址
@@ -219,6 +225,7 @@ public class PictureActivity extends AppCompatActivity {
                 .into(ivShowlove); //  参数是imageview
         //  .into(10,10);      // 参数是 两个int类型的数据  FutureTarget<TranscodeType>
         // .into()  ;  //  源码如此 public <Y extends Target<TranscodeType>> Y into(Y target) {  }
+*/
 
 
     }
