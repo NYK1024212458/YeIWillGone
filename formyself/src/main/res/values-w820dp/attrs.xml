@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CustomTimerView">
+        <!--第一个是背景颜色-->
+        <attr name="background_color" format="color" />
+        <!--第二个是线条的绘制的宽度-->
+        <attr name="border_width" format="dimension" />
+        <!--线条绘制的颜色-->
+        <attr name="border_color" format="color" />
+        <!-- 显示的字体-->
+        <attr name="text" format="string" />
+        <!--显示字体的大小-->
+        <attr name="text_size" format="dimension" />
+        <!-- 显示字体的颜色-->
+        <attr name="text_color" format="color" />
+
+    </declare-styleable>
+    <!-- 设置圆形图片的自定义属性-->
+    <declare-styleable name="CustomRoundImageView">
+        <attr name="civ_border_width" format="dimension" />
+        <attr name="civ_border_color" format="color" />
+        <attr name="civ_border_overlay" format="boolean" />
+        <attr name="civ_fill_color" format="color" />
+    </declare-styleable>
+
+    <!--夜间模式切换的属性设计-->
+    <attr name="clockBackground" format="color" />
+    <attr name="clockTextColor" format="color" />
+
+    <!--fab的自定义属性-->
+    <declare-styleable name="FAB">
+        <!-- Background color -->
+        <attr name="bg_color" format="color|reference" />
+        <attr name="bg_color_pressed" format="color|reference" />
+    </declare-styleable>
+
+    <declare-styleable name="SwipeFlingView">
+        <attr format="reference" name="SwipeFlingStyle"/>
+        <attr format="float" name="rotation_degrees"/>
+        <attr format="integer" name="min_adapter_stack"/>
+        <attr format="integer" name="max_visible"/>
+    </declare-styleable>
+</resources>

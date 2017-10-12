@@ -5,4 +5,8 @@
     <color name="colorAccent">#FF4081</color>
     <color name="app_main_color">#3F51B5</color>
     <color name="white">#ffffff</color>
+
+    <!--自定义倒计时的控件颜色-->
+    <color name="blue_afe">#2E9AFE</color>
+    <color name="black_888888">#888888</color>
 </resources>

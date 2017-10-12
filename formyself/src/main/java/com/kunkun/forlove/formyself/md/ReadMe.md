@@ -557,13 +557,197 @@ ViewTarget 需要指定 View 的类型，以及加载的资源类型，这里直
 
 前面也提到，Glide 此次加载的图片生命周期，会和 with() 传递进去的 Context 的生命周期进行绑定，所以使用 Target 加载图片的时候，就需要额外注意了，如果不是和页面绑定的图片资源，可以使用 ApplicationContext() ，避免当前页面被销毁之后，加载的请求也被停止了。
 
+# 沉浸式的实现 #
+
+我们直接使用开源库来实现!
+
+我们使用的第三方的库的地址: https://github.com/gyf-dev/ImmersionBar
+
+我们开始依赖:
+
+             compile 'com.gyf.barlibrary:barlibrary:2.3.0'
+
+基础用法:
+
+ImmersionBar.with(this).init();
+
+记得在ondestory()中进行销毁
+
+ImmersionBar.with(this).destroy(); //必须调用该方法，防止内存泄漏
+
+高级用法:
+
+
+        ImmersionBar.with(this)
+                .transparentStatusBar()  //透明状态栏，不写默认透明色
+                .transparentNavigationBar()  //透明导航栏，不写默认黑色(设置此方法，fullScreen()方法自动为true)
+                .transparentBar()             //透明状态栏和导航栏，不写默认状态栏为透明色，导航栏为黑色（设置此方法，fullScreen()方法自动为true）
+                .statusBarColor(R.color.colorPrimary)     //状态栏颜色，不写默认透明色
+                .navigationBarColor(R.color.colorPrimary) //导航栏颜色，不写默认黑色
+                .barColor(R.color.colorPrimary)  //同时自定义状态栏和导航栏颜色，不写默认状态栏为透明色，导航栏为黑色
+                .statusBarAlpha(0.3f)  //状态栏透明度，不写默认0.0f
+                .navigationBarAlpha(0.4f)  //导航栏透明度，不写默认0.0F
+                .barAlpha(0.3f)  //状态栏和导航栏透明度，不写默认0.0f
+                .statusBarDarkFont(true)   //状态栏字体是深色，不写默认为亮色
+                // .flymeOSStatusBarFontColor(R.color.btn3)  //修改flyme OS状态栏字体颜色
+                .fullScreen(true)      //有导航栏的情况下，activity全屏显示，也就是activity最下面被导航栏覆盖，不写默认非全屏
+                .hideBar(BarHide.FLAG_HIDE_BAR)  //隐藏状态栏或导航栏或两者，不写默认不隐藏
+                //.addViewSupportTransformColor(toolbar)  //设置支持view变色，可以添加多个view，不指定颜色，默认和状态栏同色，还有两个重载方法
+                //.titleBar(view)    //解决状态栏和布局重叠问题，任选其一
+                // .titleBarMarginTop(view)     //解决状态栏和布局重叠问题，任选其一
+                //.statusBarView(view)  //解决状态栏和布局重叠问题，任选其一
+                .fitsSystemWindows(true)    //解决状态栏和布局重叠问题，任选其一，默认为false，当为true时一定要指定statusBarColor()，不然状态栏为透明色，还有一些重载方法
+                .supportActionBar(true) //支持ActionBar使用
+                // .statusBarColorTransform(R.color.orange)  //状态栏变色后的颜色
+                //  .navigationBarColorTransform(R.color.orange) //导航栏变色后的颜色
+                // .barColorTransform(R.color.orange)  //状态栏和导航栏变色后的颜色
+                //.removeSupportView(toolbar)  //移除指定view支持
+                .removeSupportAllView() //移除全部view支持
+                .navigationBarEnable(true)   //是否可以修改导航栏颜色，默认为true
+                .navigationBarWithKitkatEnable(true)  //是否可以修改安卓4.4和emui3.1手机导航栏颜色，默认为true
+                .fixMarginAtBottom(true)   //已过时，当xml里使用android:fitsSystemWindows="true"属性时,解决4.4和emui3.1手机底部有时会出现多余空白的问题，默认为false，非必须
+                .addTag("tag")  //给以上设置的参数打标记
+                .getTag("tag")  //根据tag获得沉浸式参数
+                .reset()  //重置所以沉浸式参数
+                .keyboardEnable(true)  //解决软键盘与底部输入框冲突问题，默认为false，还有一个重载方法，可以指定软键盘mode
+                .keyboardMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE)  //单独指定软键盘模式
+                .setOnKeyboardListener(new OnKeyboardListener() {    //软键盘监听回调
+
+                    public void onKeyboardChange(boolean isPopup, int keyboardHeight) {
+                        LogUtils.e(isPopup + "");  //isPopup为true，软键盘弹出，为false，软键盘关闭
+                    }
+                })
+                .init();  //必须调用方可沉浸式
+
+# 加载倒计时 #
+
+模仿迅雷的倒计时的设计:
+
+首先是自定义view的复制过来 CustomTimerView  需要的是设置的是一些自定义的属性:
+
+直接粘贴attrs.xml文件过来就行.还需要缺少一些颜色文件:
+ <color name="blue_afe">#2E9AFE</color>            <color name="black_888888">#888888</color>
+
+之后就是在我们的布局中的使用:
+
+
+    <com.kunkun.forlove.formyself.view.CustomTimerView
+        android:id="@+id/cv_customtim_view"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentRight="true"
+        android:layout_margin="8dp"
+        android:layout_marginTop="100dp"
+        app:background_color="@color/black_888888"
+        app:border_color="@color/blue_afe"
+        app:border_width="5dp"
+        app:text="跳过"
+        app:text_color="@color/colorAccent"
+        app:text_size="14sp">
+    </com.kunkun.forlove.formyself.view.CustomTimerView>
+
+ 之后就是在代码中的处理工作了!
+   开始直接调用start(); 之后就是监听倒计时之后的操作.
+
+出现一个问题那就是转态栏和布局重复了!
+我们直接使用第二方法来解决,直接在跟布局添加 android:fitsSystemWindows="true" 就可以解决问题
+
+我们在展示的页面完成的时候我们需要做的就是倒计时的展示页面
 
 # 我们开始集成我们需要的最好看探探模仿 #
 
+图片的处理问题:
+http://kunkun5love.com/wordpress/wp-content/uploads/2017/10/i1.png
+其他的都是jpg的格式
+http://kunkun5love.com/wordpress/wp-content/uploads/2017/10/i15.jpg
+......i18.png
+
+
+// 集成的过程是 首先是在project的gradle  依赖
+
+        // 模仿探探的开发库
+        maven { url 'https://jitpack.io' }
+
+之后是在工程中依赖:
+
+    // 探探的集成
+    compile 'com.github.zhuchen1109:Swipe-cards:18df0b545b'
+
+    之后是首页布局的合成!
+
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFEEEEEE"
+    android:clipChildren="false">
+    <include
+        android:id="@+id/swipe_fling_bottom"
+        layout="@layout/layout_swipe_fling_bottom" />
+
+    <com.zc.swiple.SwipeFlingView
+        android:id="@+id/frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/swipe_fling_bottom"
+        android:layout_marginBottom="18dp"
+        android:clipChildren="false"
+        app:rotation_degrees="5" />
+
+</RelativeLayout>
+
+
+主要是对底部页面的自定义控件的设置: 第一就是自定义控件移植后包的问题  第二就是一些图片资源
+
+
+之后就是对第三方框架的依赖:
+
+主要有: gson  roundimageview 和 加载图片的retrofit的依赖:
+
+
+解决如下问题:
+
+ // retrofit的依赖
+    compile 'com.squareup.retrofit2:retrofit:2.1.0'
+    compile 'com.squareup.retrofit2:converter-gson:2.1.0'
+
+    // 圆形图片
+    compile 'com.makeramen:roundedimageview:2.2.1'
+
+
+    之后就是尺寸和属性的设置::
+
+        <dimen name="card_margin_left_right">12dp</dimen>
+        <dimen name="card_margin_top">8dp</dimen>
+
+属性:
+    <declare-styleable name="SwipeFlingView">
+            <attr format="reference" name="SwipeFlingStyle"/>
+            <attr format="float" name="rotation_degrees"/>
+            <attr format="integer" name="min_adapter_stack"/>
+            <attr format="integer" name="max_visible"/>
+        </declare-styleable>
+
+layout_swipe_fling_bottom.xml
+swipe_fling_item.xml
+
+第二个布局需要修改的也是移植之后的包的问题!
 
 
 
 
+
+
+
+
+
+
+
+# apk跟新安转并且自动安转的方法 #
 
 
 

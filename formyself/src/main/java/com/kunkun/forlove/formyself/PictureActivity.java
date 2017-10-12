@@ -3,23 +3,36 @@ package com.kunkun.forlove.formyself;
 import android.Manifest;
 import android.animation.ObjectAnimator;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+
 import android.view.View;
+import android.view.WindowManager;
 import android.view.animation.Transformation;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
-import com.bumptech.glide.GlideBuilder;
+
 import com.bumptech.glide.Priority;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.bumptech.glide.load.resource.drawable.GlideDrawable;
 import com.bumptech.glide.request.RequestListener;
 import com.bumptech.glide.request.animation.ViewPropertyAnimation;
 import com.bumptech.glide.request.target.Target;
+import com.gyf.barlibrary.BarHide;
+import com.gyf.barlibrary.ImmersionBar;
+import com.gyf.barlibrary.OnKeyboardListener;
 import com.joker.api.Permissions4M;
+import com.kunkun.forlove.formyself.utils.L;
+import com.kunkun.forlove.formyself.utils.LogUtils;
+import com.kunkun.forlove.formyself.utils.T;
+import com.kunkun.forlove.formyself.view.CustomTimerView;
 
 
 import butterknife.BindView;
@@ -27,14 +40,73 @@ import butterknife.ButterKnife;
 
 /**
  * com.kun.formyself.videobackgroundpackage
- * <p>
+ * <p>  实现沉浸式的高级用法
  * Created by ${kun}
  * 2017/9/28
  */
 public class PictureActivity extends AppCompatActivity {
+
+    private int START_COUNTER_TIMER = 110;
+
+    private Handler mMhandle = new Handler() {
+        @Override
+        public void handleMessage(Message msg) {
+            if (msg.what == START_COUNTER_TIMER) {
+                //开始倒计时的操作迅雷
+                statrCountTimerView();
+            }
+
+
+        }
+
+
+    };
+
+    /**
+     * start counttimer view
+     */
+    private void statrCountTimerView() {
+        customTimerView.start();
+        //设置监听
+
+        CustomTimerView.CountDownTimerListener countDownTimerListener = new CustomTimerView.CountDownTimerListener() {
+            @Override
+            public void onStartCount() {
+
+                T.show(mContext, "可以直接点击图标跳过", Toast.LENGTH_SHORT);
+
+            }
+
+            @Override
+            public void onFinishCount() {
+                // 进入到主页面    finish
+
+                Intent intent = new Intent(mContext, MainActivity.class);
+                startActivity(intent);
+                finish();
+
+            }
+        };
+        customTimerView.setCountDownTimerListener(countDownTimerListener);
+
+        // 设置点击事件
+        customTimerView.setcountTimerClickListener(new CustomTimerView.countTimerClickListener() {
+            @Override
+            public void onCountTimerClick() {
+                Intent intent = new Intent(mContext, MainActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+    }
+
     private static final int AUDIO_CODE = 6;
     @BindView(R.id.iv_showlove)
     ImageView ivShowlove;
+
+    @BindView(R.id.cv_customtim_view)
+    CustomTimerView customTimerView;
 
     private Context mContext;
     private String ImageUrl = "http://116.196.91.100/wordpress/wp-content/uploads/2017/09/微信图片_20170929111751.jpg";
@@ -50,6 +122,11 @@ public class PictureActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_picture);
+
+        //沉浸式的高级用法
+        initImmersionBar();
+
+
         ButterKnife.bind(this);
 
         mContext = PictureActivity.this;
@@ -57,6 +134,21 @@ public class PictureActivity extends AppCompatActivity {
 
         // glide获取图片并加载
         setImage();
+
+
+    }
+
+    private void initImmersionBar() {
+        ImmersionBar.with(this).init();
+
+      /*  ImmersionBar mImmersionBar = ImmersionBar
+                .with(this);
+
+
+        mImmersionBar.barColor(R.color.colorPrimary)
+                .init();
+*/
+
     }
 
     private void setImage() {
@@ -92,7 +184,16 @@ public class PictureActivity extends AppCompatActivity {
             }
 
             @Override
-            public boolean onResourceReady(GlideDrawable resource, String model, Target<GlideDrawable> target, boolean isFromMemoryCache, boolean isFirstResource) {
+            public boolean onResourceReady(GlideDrawable resource, String model, Target<GlideDrawable> target,
+                                           boolean isFromMemoryCache, boolean isFirstResource) {
+
+                //  我们看看日志的输出\
+
+                L.d("ceshideshuchu", "测试我们看看是不是图片的加载已经是不是完成了!");
+
+                //加载完毕我们可以倒计时了!
+                mMhandle.sendEmptyMessage(START_COUNTER_TIMER);
+
                 return false;
             }
         };

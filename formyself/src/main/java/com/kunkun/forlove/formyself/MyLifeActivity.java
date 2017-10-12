@@ -16,6 +16,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 
+import com.gyf.barlibrary.ImmersionBar;
 import com.kunkun.forlove.formyself.utils.SPUtils;
 import com.kunkun.forlove.formyself.utils.T;
 import com.kunkun.forlove.formyself.view.KunVideoView;
@@ -61,6 +62,9 @@ public class MyLifeActivity extends AppCompatActivity {
         mContext = MyLifeActivity.this;
 
         initView();
+
+        //沉浸式的实现
+        ImmersionBar.with(this).init();
     }
 
     private void initView() {
@@ -140,5 +144,14 @@ public class MyLifeActivity extends AppCompatActivity {
 
     @OnClick(R.id.btn_regist)
     public void onBtnRegistClicked() {
+    }
+
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+
+        // 沉浸式的销毁
+        ImmersionBar.with(this).destroy();
     }
 }

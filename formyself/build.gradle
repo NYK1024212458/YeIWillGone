@@ -48,5 +48,17 @@ dependencies {
     compile 'com.github.bumptech.glide:glide:3.8.0'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.1.1'
 
+    //沉浸式的依赖
+    compile 'com.gyf.barlibrary:barlibrary:2.3.0'
+
+    // 探探的集成
+    compile 'com.github.zhuchen1109:Swipe-cards:18df0b545b'
+
+    // retrofit的依赖
+    compile 'com.squareup.retrofit2:retrofit:2.1.0'
+    compile 'com.squareup.retrofit2:converter-gson:2.1.0'
+
+    // 圆形图片
+    compile 'com.makeramen:roundedimageview:2.2.1'
 
 }
