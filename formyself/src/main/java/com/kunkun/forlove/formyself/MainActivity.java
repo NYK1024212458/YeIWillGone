@@ -1,6 +1,7 @@
 package com.kunkun.forlove.formyself;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -84,6 +85,14 @@ public class MainActivity extends AppCompatActivity implements SwipeFlingView.on
         //  直接设置点击事件
 
         mSwipeFlingBottomLayout.setOnBottomItemClickListener(this);
+
+
+        findViewById(R.id.btn_enter).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(mContext,BottomNagivateActivity.class));
+            }
+        });
 
 
     }

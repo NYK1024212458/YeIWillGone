@@ -3,7 +3,10 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/YeIWillGone.iml" filepath="$PROJECT_DIR$/YeIWillGone.iml" />
+      <module fileurl="file://$PROJECT_DIR$/YeIWillGone.iml" filepath="$PROJECT_DIR$/YeIWillGone.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/formyself/formyself.iml" filepath="$PROJECT_DIR$/formyself/formyself.iml" />
       <module fileurl="file://$PROJECT_DIR$/formyself/formyself.iml" filepath="$PROJECT_DIR$/formyself/formyself.iml" />
     </modules>
   </component>

@@ -61,4 +61,7 @@ dependencies {
     // 圆形图片
     compile 'com.makeramen:roundedimageview:2.2.1'
 
+    // 底部导航栏的实现
+    compile 'com.ycl.tabview.library:tabviewlibrary:1.0'
+
 }

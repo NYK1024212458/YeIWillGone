@@ -750,10 +750,13 @@ swipe_fling_item.xml
 
 # 底部导航栏的实现 #
 
+我们使用的库是:https://github.com/yaochangliang159/Android-TabView
 
 
 
-# 直接使用快速开发框架 #
+
+
+
 
 
 

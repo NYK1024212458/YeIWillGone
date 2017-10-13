@@ -8,6 +8,7 @@
     android:background="#FFEEEEEE"
     android:fitsSystemWindows="true"
     android:clipChildren="false">
+
     <include
         android:id="@+id/swipe_fling_bottom"
         layout="@layout/layout_swipe_fling_bottom" />
@@ -20,5 +21,10 @@
         android:layout_marginBottom="18dp"
         android:clipChildren="false"
         app:rotation_degrees="5" />
+    <Button
+        android:text="进入底部导航"
+        android:id="@+id/btn_enter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
 </RelativeLayout>
