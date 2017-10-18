@@ -10,7 +10,8 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/formyself" />
-            <option value="$PROJECT_DIR$/sanyidademo" />
+            <option value="$PROJECT_DIR$/sanyida" />
+            <option value="$PROJECT_DIR$/speechDemo" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

@@ -1,0 +1,1071 @@
+[
+    {
+        "outputFile": "D:\\develop\\AndroidDevelop\\YeIWillGone\\speechDemo\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endLine": 6,
+                    "endColumn": 19,
+                    "endOffset": 185
+                },
+                "from": {
+                    "file": "D:\\develop\\AndroidDevelop\\YeIWillGone\\speechDemo\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 128,
+                        "startColumn": 4,
+                        "startOffset": 5206,
+                        "endLine": 132,
+                        "endColumn": 19,
+                        "endOffset": 5340
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 7,
+                    "startColumn": 4,
+                    "startOffset": 190,
+                    "endLine": 11,
+                    "endColumn": 19,
+                    "endOffset": 348
+                },
+                "from": {
+                    "file": "D:\\develop\\AndroidDevelop\\YeIWillGone\\speechDemo\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 133,
+                        "startColumn": 4,
+                        "startOffset": 5346,
+                        "endLine": 137,
+                        "endColumn": 19,
+                        "endOffset": 5508
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 12,
+                    "startColumn": 4,
+                    "startOffset": 353,
+                    "endLine": 15,
+                    "endColumn": 19,
+                    "endOffset": 454
+                },
+                "from": {
+                    "file": "D:\\develop\\AndroidDevelop\\YeIWillGone\\speechDemo\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 151,
+                        "startColumn": 4,
+                        "startOffset": 5882,
+                        "endLine": 154,
+                        "endColumn": 19,
+                        "endOffset": 5986
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 16,
+                    "startColumn": 4,
+                    "startOffset": 459,
+                    "endLine": 21,
+                    "endColumn": 19,
+                    "endOffset": 609
+                },
+                "from": {
+                    "file": "D:\\develop\\AndroidDevelop\\YeIWillGone\\speechDemo\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 74,
+                        "startColumn": 4,
+                        "startOffset": 3425,
+                        "endLine": 79,
+                        "endColumn": 19,
+                        "endOffset": 3580
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 22,
+                    "startColumn": 4,
+                    "startOffset": 614,
+                    "endLine": 27,
+                    "endColumn": 19,
+                    "endOffset": 775
+                },
+                "from": {
+                    "file": "D:\\develop\\AndroidDevelop\\YeIWillGone\\speechDemo\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 80,
+                        "startColumn": 4,
+                        "startOffset": 3586,
+                        "endLine": 85,
+                        "endColumn": 19,
+                        "endOffset": 3752
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 28,
+                    "startColumn": 4,
+                    "startOffset": 780,
+                    "endLine": 31,
+                    "endColumn": 19,
+                    "endOffset": 888
+                },
+                "from": {
+                    "file": "D:\\develop\\AndroidDevelop\\YeIWillGone\\speechDemo\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 26,
+                        "startColumn": 4,
+                        "startOffset": 1913,
+                        "endLine": 29,
+                        "endColumn": 19,
+                        "endOffset": 2024
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 32,
+                    "startColumn": 4,
+                    "startOffset": 893,
+                    "endLine": 35,
+                    "endColumn": 19,
+                    "endOffset": 1002
+                },
+                "from": {
+                    "file": "D:\\develop\\AndroidDevelop\\YeIWillGone\\speechDemo\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 30,
+                        "startColumn": 4,
+                        "startOffset": 2030,
+                        "endLine": 33,
+                        "endColumn": 19,
+                        "endOffset": 2142
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 36,
+                    "startColumn": 4,
+                    "startOffset": 1007,
+                    "endLine": 39,
+                    "endColumn": 19,
+                    "endOffset": 1117
+                },
+                "from": {
+                    "file": "D:\\develop\\AndroidDevelop\\YeIWillGone\\speechDemo\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 120,
+                        "startColumn": 4,
+                        "startOffset": 4963,
+                        "endLine": 123,
+                        "endColumn": 19,
+                        "endOffset": 5076
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 40,
+                    "startColumn": 4,
+                    "startOffset": 1122,
+                    "endLine": 43,
+                    "endColumn": 19,
+                    "endOffset": 1237
+                },
+                "from": {
+                    "file": "D:\\develop\\AndroidDevelop\\YeIWillGone\\speechDemo\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 124,
+                        "startColumn": 4,
+                        "startOffset": 5082,
+                        "endLine": 127,
+                        "endColumn": 19,
+                        "endOffset": 5200
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 44,
+                    "startColumn": 4,
+                    "startOffset": 1242,
+                    "endLine": 48,
+                    "endColumn": 19,
+                    "endOffset": 1373
+                },
+                "from": {
+                    "file": "D:\\develop\\AndroidDevelop\\YeIWillGone\\speechDemo\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 104,
+                        "startColumn": 4,
+                        "startOffset": 4278,
+                        "endLine": 108,
+                        "endColumn": 19,
+                        "endOffset": 4413
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 49,
+                    "startColumn": 4,
+                    "startOffset": 1378,
+                    "endLine": 53,
+                    "endColumn": 19,
+                    "endOffset": 1523
+                },
+                "from": {
+                    "file": "D:\\develop\\AndroidDevelop\\YeIWillGone\\speechDemo\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 109,
+                        "startColumn": 4,
+                        "startOffset": 4419,
+                        "endLine": 113,
+                        "endColumn": 19,
+                        "endOffset": 4568
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 54,
+                    "startColumn": 4,
+                    "startOffset": 1528,
+                    "endLine": 57,
+                    "endColumn": 19,
+                    "endOffset": 1632
+                },
+                "from": {
+                    "file": "D:\\develop\\AndroidDevelop\\YeIWillGone\\speechDemo\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 143,
+                        "startColumn": 4,
+                        "startOffset": 5661,
+                        "endLine": 146,
+                        "endColumn": 19,
+                        "endOffset": 5768
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 58,
+                    "startColumn": 4,
+                    "startOffset": 1637,
+                    "endLine": 61,
+                    "endColumn": 19,
+                    "endOffset": 1736
+                },
+                "from": {
+                    "file": "D:\\develop\\AndroidDevelop\\YeIWillGone\\speechDemo\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 147,
+                        "startColumn": 4,
+                        "startOffset": 5774,
+                        "endLine": 150,
+                        "endColumn": 19,
+                        "endOffset": 5876
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 62,
+                    "startColumn": 4,
+                    "startOffset": 1741,
+                    "endLine": 65,
+                    "endColumn": 19,
+                    "endOffset": 1860
+                },
+                "from": {
+                    "file": "D:\\develop\\AndroidDevelop\\YeIWillGone\\speechDemo\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 138,
+                        "startColumn": 4,
+                        "startOffset": 5514,
+                        "endLine": 141,
+                        "endColumn": 19,
+                        "endOffset": 5636
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 66,
+                    "startColumn": 4,
+                    "startOffset": 1865,
+                    "endLine": 73,
+                    "endColumn": 19,
+                    "endOffset": 2065
+                },
+                "from": {
+                    "file": "D:\\develop\\AndroidDevelop\\YeIWillGone\\speechDemo\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 86,
+                        "startColumn": 4,
+                        "startOffset": 3758,
+                        "endLine": 93,
+                        "endColumn": 19,
+                        "endOffset": 3965
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 74,
+                    "startColumn": 4,
+                    "startOffset": 2070,
+                    "endLine": 81,
+                    "endColumn": 19,
+                    "endOffset": 2263
+                },
+                "from": {
+                    "file": "D:\\develop\\AndroidDevelop\\YeIWillGone\\speechDemo\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 94,
+                        "startColumn": 4,
+                        "startOffset": 3971,
+                        "endLine": 101,
+                        "endColumn": 19,
+                        "endOffset": 4171
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 82,
+                    "startColumn": 4,
+                    "startOffset": 2268,
+                    "endLine": 101,
+                    "endColumn": 19,
+                    "endOffset": 2921
+                },
+                "from": {
+                    "file": "D:\\develop\\AndroidDevelop\\YeIWillGone\\speechDemo\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 34,
+                        "startColumn": 4,
+                        "startOffset": 2148,
+                        "endLine": 53,
+                        "endColumn": 19,
+                        "endOffset": 2820
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 102,
+                    "startColumn": 4,
+                    "startOffset": 2926,
+                    "endLine": 121,
+                    "endColumn": 19,
+                    "endOffset": 3500
+                },
+                "from": {
+                    "file": "D:\\develop\\AndroidDevelop\\YeIWillGone\\speechDemo\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 54,
+                        "startColumn": 4,
+                        "startOffset": 2826,
+                        "endLine": 73,
+                        "endColumn": 19,
+                        "endOffset": 3419
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 122,
+                    "startColumn": 4,
+                    "startOffset": 3505,
+                    "endColumn": 47,
+                    "endOffset": 3548
+                },
+                "from": {
+                    "file": "D:\\develop\\AndroidDevelop\\YeIWillGone\\speechDemo\\src\\main\\res\\values\\colors.xml",
+                    "position": {
+                        "startLine": 14,
+                        "startColumn": 4,
+                        "startOffset": 384,
+                        "endColumn": 47,
+                        "endOffset": 427
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 123,
+                    "startColumn": 4,
+                    "startOffset": 3553,
+                    "endColumn": 54,
+                    "endOffset": 3603
+                },
+                "from": {
+                    "file": "D:\\develop\\AndroidDevelop\\YeIWillGone\\speechDemo\\src\\main\\res\\values\\colors.xml",
+                    "position": {
+                        "startLine": 12,
+                        "startColumn": 4,
+                        "startOffset": 283,
+                        "endColumn": 54,
+                        "endOffset": 333
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 124,
+                    "startColumn": 4,
+                    "startOffset": 3608,
+                    "endColumn": 45,
+                    "endOffset": 3649
+                },
+                "from": {
+                    "file": "D:\\develop\\AndroidDevelop\\YeIWillGone\\speechDemo\\src\\main\\res\\values\\colors.xml",
+                    "position": {
+                        "startLine": 13,
+                        "startColumn": 4,
+                        "startOffset": 338,
+                        "endColumn": 45,
+                        "endOffset": 379
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 125,
+                    "startColumn": 4,
+                    "startOffset": 3654,
+                    "endColumn": 39,
+                    "endOffset": 3689
+                },
+                "from": {
+                    "file": "D:\\develop\\AndroidDevelop\\YeIWillGone\\speechDemo\\src\\main\\res\\values\\colors.xml",
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 4,
+                        "startOffset": 214,
+                        "endColumn": 39,
+                        "endOffset": 249
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 126,
+                    "startColumn": 4,
+                    "startOffset": 3694,
+                    "endColumn": 39,
+                    "endOffset": 3729
+                },
+                "from": {
+                    "file": "D:\\develop\\AndroidDevelop\\YeIWillGone\\speechDemo\\src\\main\\res\\values\\dimen.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 137,
+                        "endColumn": 39,
+                        "endOffset": 172
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 127,
+                    "startColumn": 4,
+                    "startOffset": 3734,
+                    "endColumn": 41,
+                    "endOffset": 3771
+                },
+                "from": {
+                    "file": "D:\\develop\\AndroidDevelop\\YeIWillGone\\speechDemo\\src\\main\\res\\values\\dimen.xml",
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 4,
+                        "startOffset": 241,
+                        "endColumn": 41,
+                        "endOffset": 278
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 128,
+                    "startColumn": 4,
+                    "startOffset": 3776,
+                    "endColumn": 38,
+                    "endOffset": 3810
+                },
+                "from": {
+                    "file": "D:\\develop\\AndroidDevelop\\YeIWillGone\\speechDemo\\src\\main\\res\\values\\dimen.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 60,
+                        "endColumn": 38,
+                        "endOffset": 94
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 129,
+                    "startColumn": 4,
+                    "startOffset": 3815,
+                    "endColumn": 37,
+                    "endOffset": 3848
+                },
+                "from": {
+                    "file": "D:\\develop\\AndroidDevelop\\YeIWillGone\\speechDemo\\src\\main\\res\\values\\dimen.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 99,
+                        "endColumn": 37,
+                        "endOffset": 132
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 130,
+                    "startColumn": 4,
+                    "startOffset": 3853,
+                    "endColumn": 39,
+                    "endOffset": 3888
+                },
+                "from": {
+                    "file": "D:\\develop\\AndroidDevelop\\YeIWillGone\\speechDemo\\src\\main\\res\\values\\dimen.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 177,
+                        "endColumn": 39,
+                        "endOffset": 212
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 131,
+                    "startColumn": 4,
+                    "startOffset": 3893,
+                    "endColumn": 56,
+                    "endOffset": 3945
+                },
+                "from": {
+                    "file": "D:\\develop\\AndroidDevelop\\YeIWillGone\\speechDemo\\src\\main\\res\\values\\colors.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 75,
+                        "endColumn": 56,
+                        "endOffset": 127
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 132,
+                    "startColumn": 4,
+                    "startOffset": 3950,
+                    "endColumn": 55,
+                    "endOffset": 4001
+                },
+                "from": {
+                    "file": "D:\\develop\\AndroidDevelop\\YeIWillGone\\speechDemo\\src\\main\\res\\values\\colors.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 4,
+                        "startOffset": 157,
+                        "endColumn": 55,
+                        "endOffset": 208
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 133,
+                    "startColumn": 4,
+                    "startOffset": 4006,
+                    "endColumn": 43,
+                    "endOffset": 4045
+                },
+                "from": {
+                    "file": "D:\\develop\\AndroidDevelop\\YeIWillGone\\speechDemo\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 151,
+                        "endColumn": 43,
+                        "endOffset": 190
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 134,
+                    "startColumn": 4,
+                    "startOffset": 4050,
+                    "endColumn": 43,
+                    "endOffset": 4089
+                },
+                "from": {
+                    "file": "D:\\develop\\AndroidDevelop\\YeIWillGone\\speechDemo\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 73,
+                        "endColumn": 43,
+                        "endOffset": 112
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 135,
+                    "startColumn": 4,
+                    "startOffset": 4094,
+                    "endColumn": 120,
+                    "endOffset": 4210
+                },
+                "from": {
+                    "file": "D:\\develop\\AndroidDevelop\\YeIWillGone\\speechDemo\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 196,
+                        "endColumn": 120,
+                        "endOffset": 312
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 136,
+                    "startColumn": 4,
+                    "startOffset": 4215,
+                    "endColumn": 54,
+                    "endOffset": 4265
+                },
+                "from": {
+                    "file": "D:\\develop\\AndroidDevelop\\YeIWillGone\\speechDemo\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 18,
+                        "startColumn": 4,
+                        "startOffset": 1663,
+                        "endColumn": 54,
+                        "endOffset": 1713
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 137,
+                    "startColumn": 4,
+                    "startOffset": 4270,
+                    "endColumn": 56,
+                    "endOffset": 4322
+                },
+                "from": {
+                    "file": "D:\\develop\\AndroidDevelop\\YeIWillGone\\speechDemo\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 21,
+                        "startColumn": 4,
+                        "startOffset": 1777,
+                        "endColumn": 56,
+                        "endOffset": 1829
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 138,
+                    "startColumn": 4,
+                    "startOffset": 4327,
+                    "endColumn": 54,
+                    "endOffset": 4377
+                },
+                "from": {
+                    "file": "D:\\develop\\AndroidDevelop\\YeIWillGone\\speechDemo\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 19,
+                        "startColumn": 4,
+                        "startOffset": 1719,
+                        "endColumn": 54,
+                        "endOffset": 1769
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 139,
+                    "startColumn": 4,
+                    "startOffset": 4382,
+                    "endColumn": 51,
+                    "endOffset": 4429
+                },
+                "from": {
+                    "file": "D:\\develop\\AndroidDevelop\\YeIWillGone\\speechDemo\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 22,
+                        "startColumn": 4,
+                        "startOffset": 1835,
+                        "endColumn": 51,
+                        "endOffset": 1882
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 140,
+                    "startColumn": 4,
+                    "startOffset": 4434,
+                    "endColumn": 45,
+                    "endOffset": 4475
+                },
+                "from": {
+                    "file": "D:\\develop\\AndroidDevelop\\YeIWillGone\\speechDemo\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 11,
+                        "startColumn": 4,
+                        "startOffset": 1272,
+                        "endColumn": 45,
+                        "endOffset": 1313
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 141,
+                    "startColumn": 4,
+                    "startOffset": 4480,
+                    "endColumn": 57,
+                    "endOffset": 4533
+                },
+                "from": {
+                    "file": "D:\\develop\\AndroidDevelop\\YeIWillGone\\speechDemo\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 12,
+                        "startColumn": 4,
+                        "startOffset": 1319,
+                        "endColumn": 57,
+                        "endOffset": 1372
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 142,
+                    "startColumn": 4,
+                    "startOffset": 4538,
+                    "endColumn": 88,
+                    "endOffset": 4622
+                },
+                "from": {
+                    "file": "D:\\develop\\AndroidDevelop\\YeIWillGone\\speechDemo\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 119,
+                        "startColumn": 4,
+                        "startOffset": 4873,
+                        "endColumn": 88,
+                        "endOffset": 4957
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 143,
+                    "startColumn": 4,
+                    "startOffset": 4627,
+                    "endColumn": 52,
+                    "endOffset": 4675
+                },
+                "from": {
+                    "file": "D:\\develop\\AndroidDevelop\\YeIWillGone\\speechDemo\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 117,
+                        "startColumn": 4,
+                        "startOffset": 4760,
+                        "endColumn": 52,
+                        "endOffset": 4808
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 144,
+                    "startColumn": 4,
+                    "startOffset": 4680,
+                    "endColumn": 57,
+                    "endOffset": 4733
+                },
+                "from": {
+                    "file": "D:\\develop\\AndroidDevelop\\YeIWillGone\\speechDemo\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 118,
+                        "startColumn": 4,
+                        "startOffset": 4814,
+                        "endColumn": 57,
+                        "endOffset": 4867
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 145,
+                    "startColumn": 4,
+                    "startOffset": 4738,
+                    "endColumn": 54,
+                    "endOffset": 4788
+                },
+                "from": {
+                    "file": "D:\\develop\\AndroidDevelop\\YeIWillGone\\speechDemo\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 17,
+                        "startColumn": 4,
+                        "startOffset": 1607,
+                        "endColumn": 54,
+                        "endOffset": 1657
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 146,
+                    "startColumn": 4,
+                    "startOffset": 4793,
+                    "endColumn": 91,
+                    "endOffset": 4880
+                },
+                "from": {
+                    "file": "D:\\develop\\AndroidDevelop\\YeIWillGone\\speechDemo\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 116,
+                        "startColumn": 4,
+                        "startOffset": 4667,
+                        "endColumn": 91,
+                        "endOffset": 4754
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 147,
+                    "startColumn": 4,
+                    "startOffset": 4885,
+                    "endColumn": 72,
+                    "endOffset": 4953
+                },
+                "from": {
+                    "file": "D:\\develop\\AndroidDevelop\\YeIWillGone\\speechDemo\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 115,
+                        "startColumn": 4,
+                        "startOffset": 4593,
+                        "endColumn": 72,
+                        "endOffset": 4661
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 148,
+                    "startColumn": 4,
+                    "startOffset": 4958,
+                    "endColumn": 214,
+                    "endOffset": 5168
+                },
+                "from": {
+                    "file": "D:\\develop\\AndroidDevelop\\YeIWillGone\\speechDemo\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 4,
+                        "startOffset": 892,
+                        "endColumn": 214,
+                        "endOffset": 1102
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 149,
+                    "startColumn": 4,
+                    "startOffset": 5173,
+                    "endColumn": 156,
+                    "endOffset": 5325
+                },
+                "from": {
+                    "file": "D:\\develop\\AndroidDevelop\\YeIWillGone\\speechDemo\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 318,
+                        "endColumn": 156,
+                        "endOffset": 470
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 150,
+                    "startColumn": 4,
+                    "startOffset": 5330,
+                    "endColumn": 414,
+                    "endOffset": 5740
+                },
+                "from": {
+                    "file": "D:\\develop\\AndroidDevelop\\YeIWillGone\\speechDemo\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 4,
+                        "startOffset": 476,
+                        "endColumn": 414,
+                        "endOffset": 886
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 151,
+                    "startColumn": 4,
+                    "startOffset": 5745,
+                    "endColumn": 145,
+                    "endOffset": 5886
+                },
+                "from": {
+                    "file": "D:\\develop\\AndroidDevelop\\YeIWillGone\\speechDemo\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 4,
+                        "startOffset": 1108,
+                        "endColumn": 145,
+                        "endOffset": 1249
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 152,
+                    "startColumn": 4,
+                    "startOffset": 5891,
+                    "endColumn": 54,
+                    "endOffset": 5941
+                },
+                "from": {
+                    "file": "D:\\develop\\AndroidDevelop\\YeIWillGone\\speechDemo\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 13,
+                        "startColumn": 4,
+                        "startOffset": 1378,
+                        "endColumn": 54,
+                        "endOffset": 1428
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 153,
+                    "startColumn": 4,
+                    "startOffset": 5946,
+                    "endColumn": 52,
+                    "endOffset": 5994
+                },
+                "from": {
+                    "file": "D:\\develop\\AndroidDevelop\\YeIWillGone\\speechDemo\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 15,
+                        "startColumn": 4,
+                        "startOffset": 1492,
+                        "endColumn": 52,
+                        "endOffset": 1540
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 154,
+                    "startColumn": 4,
+                    "startOffset": 5999,
+                    "endColumn": 56,
+                    "endOffset": 6051
+                },
+                "from": {
+                    "file": "D:\\develop\\AndroidDevelop\\YeIWillGone\\speechDemo\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 14,
+                        "startColumn": 4,
+                        "startOffset": 1434,
+                        "endColumn": 56,
+                        "endOffset": 1486
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 155,
+                    "startColumn": 4,
+                    "startOffset": 6056,
+                    "endColumn": 59,
+                    "endOffset": 6111
+                },
+                "from": {
+                    "file": "D:\\develop\\AndroidDevelop\\YeIWillGone\\speechDemo\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 16,
+                        "startColumn": 4,
+                        "startOffset": 1546,
+                        "endColumn": 59,
+                        "endOffset": 1601
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 156,
+                    "startColumn": 4,
+                    "startOffset": 6116,
+                    "endColumn": 82,
+                    "endOffset": 6194
+                },
+                "from": {
+                    "file": "D:\\develop\\AndroidDevelop\\YeIWillGone\\speechDemo\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 102,
+                        "startColumn": 4,
+                        "startOffset": 4177,
+                        "endColumn": 82,
+                        "endOffset": 4255
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 157,
+                    "startColumn": 4,
+                    "startOffset": 6199,
+                    "endLine": 166,
+                    "endColumn": 9,
+                    "endOffset": 6723
+                },
+                "from": {
+                    "file": "D:\\develop\\AndroidDevelop\\YeIWillGone\\speechDemo\\src\\main\\res\\values\\styles.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 6,
+                        "startOffset": 59,
+                        "endLine": 11,
+                        "endColumn": 9,
+                        "endOffset": 592
+                    }
+                }
+            }
+        ]
+    }
+]

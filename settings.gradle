@@ -1,1 +1,1 @@
-include ':app', ':formyself', ':sanyidademo'
+include ':app', ':formyself', ':sanyida', ':speechDemo'
