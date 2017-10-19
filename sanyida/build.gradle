@@ -32,4 +32,5 @@ dependencies {
     testCompile 'junit:junit:4.12'
     compile files('libs/AlsaRecorder.jar')
     compile files('libs/Msc.jar')
+    compile files('libs/Sunflower.jar')
 }

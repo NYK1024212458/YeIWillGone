@@ -1,4 +1,4 @@
-#Wed Oct 18 16:18:18 CST 2017
+#Thu Oct 19 16:20:47 CST 2017
 base.0=D\:\\develop\\AndroidDevelop\\YeIWillGone\\speechDemo\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main
 renamed.0=classes.dex
 file.0=D\:\\develop\\AndroidDevelop\\YeIWillGone\\speechDemo\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main\\classes.dex

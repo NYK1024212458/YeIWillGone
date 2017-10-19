@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Wed Oct 18 16:18:19 CST 2017
+#Thu Oct 19 16:20:47 CST 2017
 25.file=D\:\\develop\\AndroidDevelop\\YeIWillGone\\speechDemo\\build\\intermediates\\assets\\debug\\iattest.wav
 25.base=D\:\\develop\\AndroidDevelop\\YeIWillGone\\speechDemo\\build\\intermediates\\assets\\debug
 22.set=ANDROID_RESOURCE

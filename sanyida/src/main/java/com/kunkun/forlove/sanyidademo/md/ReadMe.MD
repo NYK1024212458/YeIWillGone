@@ -60,6 +60,8 @@ AIIUI的地址: http://aiui.xfyun.cn/myApp/index/58ed7c97/
  -keepattributes Signature
 
 
+
+
 # 初始化的操作 #
 
 初始化直接在我们自己的application中的设置.  创建完毕记得在清单文件中去申明
@@ -67,6 +69,10 @@ AIIUI的地址: http://aiui.xfyun.cn/myApp/index/58ed7c97/
 
 4.AIUI接口文档详见：http://doc.xfyun.cn/aiui_mobile/
 5.通用msc 文档请详见：http://doc.xfyun.cn/msc_android/
+
+
+
+
 
 
 
