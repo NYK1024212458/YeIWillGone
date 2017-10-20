@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.Window;
 import android.widget.EditText;
+import android.widget.ListView;
 import android.widget.Toast;
 
 import java.io.IOException;
@@ -31,7 +32,8 @@ public class NlpDemo extends Activity implements OnClickListener {
 	
 	private AIUIAgent mAIUIAgent = null;
 	private int mAIUIState = AIUIConstant.STATE_IDLE;
-	
+	private ListView lv_showmessage;
+
 	@SuppressLint("ShowToast")
 	public void onCreate(Bundle savedInstanceState)
 	{
@@ -50,10 +52,10 @@ public class NlpDemo extends Activity implements OnClickListener {
 		findViewById(R.id.text_nlp_start).setOnClickListener(this);
 		findViewById(R.id.nlp_start).setOnClickListener(this);
 
-		mNlpText = (EditText)findViewById(R.id.nlp_text);
-		
+		lv_showmessage = (ListView) findViewById(R.id.lv_showmessage);
+
 		findViewById(R.id.nlp_stop).setOnClickListener(this);
-		findViewById( R.id.update_lexicon).setOnClickListener(this);
+
 	}
 	
 	int ret = 0;// 函数调用返回值
@@ -78,9 +80,9 @@ public class NlpDemo extends Activity implements OnClickListener {
 			// AIUI 是连续会话，一次 start 后，可以连续的录音并返回结果；要停止需要调用 stop
 			stopVoiceNlp();
 			break;
-		case R.id.update_lexicon:
+		/*case R.id.update_lexicon:
 			updateLexicon();
-			break;
+			break;*/
 		default:
 			break;
 		}
@@ -164,7 +166,7 @@ public class NlpDemo extends Activity implements OnClickListener {
 		mAIUIAgent.sendMessage(msg);
 	}
 	
-	private void updateLexicon(){
+	/*private void updateLexicon(){
 		String params = null;
 		String contents = FucUtil.readFile(this, "userwords","utf-8");
 		try{
@@ -182,7 +184,7 @@ public class NlpDemo extends Activity implements OnClickListener {
 		AIUIMessage msg = new AIUIMessage(AIUIConstant.CMD_UPLOAD_LEXICON, 0, 0, params, null);
 		mAIUIAgent.sendMessage(msg);
 	}
-	
+	*/
 	private AIUIListener mAIUIListener = new AIUIListener() {
 
 		@Override
@@ -212,6 +214,8 @@ public class NlpDemo extends Activity implements OnClickListener {
 							if ("nlp".equals(sub)) {
 								// 解析得到语义结果
 								String resultStr = cntJson.optString("intent");
+
+
 								Log.i( TAG, resultStr );
 							}
 						}
@@ -228,6 +232,8 @@ public class NlpDemo extends Activity implements OnClickListener {
 					Log.i( TAG,  "on event: "+ event.eventType );
 					mNlpText.append( "\n" );
 					mNlpText.append( "错误: "+event.arg1+"\n"+event.info );
+
+
 				} break;
 	
 				case AIUIConstant.EVENT_VAD: {

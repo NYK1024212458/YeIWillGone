@@ -16,6 +16,5 @@
 #   public *;
 #}
 
--keep class com.iflytek.**{*;}
--keepattributes Signature
+
 

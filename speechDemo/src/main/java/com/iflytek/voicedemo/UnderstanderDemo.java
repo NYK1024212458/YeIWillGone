@@ -26,7 +26,7 @@ import com.iflytek.cloud.TextUnderstander;
 import com.iflytek.cloud.TextUnderstanderListener;
 import com.iflytek.cloud.UnderstanderResult;
 import com.iflytek.speech.setting.UnderstanderSettings;
-import com.iflytek.sunflower.FlowerCollector;
+
 
 public class UnderstanderDemo extends Activity implements OnClickListener {
 	private static String TAG = UnderstanderDemo.class.getSimpleName();
@@ -309,7 +309,7 @@ public class UnderstanderDemo extends Activity implements OnClickListener {
 	
 	/**
 	 * 参数设置
-	 * @param param
+	 * @param
 	 * @return 
 	 */
 	public void setParam(){
@@ -345,16 +345,16 @@ public class UnderstanderDemo extends Activity implements OnClickListener {
 	@Override
 	protected void onResume() {
 		//移动数据统计分析
-		FlowerCollector.onResume(UnderstanderDemo.this);
-		FlowerCollector.onPageStart(TAG);
+		/*FlowerCollector.onResume(UnderstanderDemo.this);
+		FlowerCollector.onPageStart(TAG);*/
 		super.onResume();
 	}
 	
 	@Override
 	protected void onPause() {
 		//移动数据统计分析
-		FlowerCollector.onPageEnd(TAG);
-		FlowerCollector.onPause(UnderstanderDemo.this);
+	/*	FlowerCollector.onPageEnd(TAG);
+		FlowerCollector.onPause(UnderstanderDemo.this);*/
 		super.onPause();
 	}
 	

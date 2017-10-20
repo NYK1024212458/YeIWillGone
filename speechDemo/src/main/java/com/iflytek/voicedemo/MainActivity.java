@@ -1,6 +1,5 @@
 package com.iflytek.voicedemo;
 
-import com.iflytek.sunflower.FlowerCollector;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
@@ -121,16 +120,16 @@ public class MainActivity extends Activity implements OnClickListener {
 	@Override
 	protected void onResume() {
 		// 开放统计 移动数据统计分析
-		FlowerCollector.onResume(MainActivity.this);
-		FlowerCollector.onPageStart(TAG);
+		/*FlowerCollector.onResume(MainActivity.this);
+		FlowerCollector.onPageStart(TAG);*/
 		super.onResume();
 	}
 
 	@Override
 	protected void onPause() {
 		// 开放统计 移动数据统计分析
-		FlowerCollector.onPageEnd(TAG);
-		FlowerCollector.onPause(MainActivity.this);
+		/*FlowerCollector.onPageEnd(TAG);
+		FlowerCollector.onPause(MainActivity.this);*/
 		super.onPause();
 	}
 

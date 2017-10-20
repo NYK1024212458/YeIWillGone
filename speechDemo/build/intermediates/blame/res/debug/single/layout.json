@@ -28,11 +28,11 @@
         "source": "D:\\develop\\AndroidDevelop\\YeIWillGone\\speechDemo\\src\\main\\res\\layout\\isedemo.xml"
     },
     {
-        "merged": "D:\\develop\\AndroidDevelop\\YeIWillGone\\speechDemo\\build\\intermediates\\res\\merged\\debug\\layout\\understander.xml",
-        "source": "D:\\develop\\AndroidDevelop\\YeIWillGone\\speechDemo\\src\\main\\res\\layout\\understander.xml"
-    },
-    {
         "merged": "D:\\develop\\AndroidDevelop\\YeIWillGone\\speechDemo\\build\\intermediates\\res\\merged\\debug\\layout\\iatdemo.xml",
         "source": "D:\\develop\\AndroidDevelop\\YeIWillGone\\speechDemo\\src\\main\\res\\layout\\iatdemo.xml"
+    },
+    {
+        "merged": "D:\\develop\\AndroidDevelop\\YeIWillGone\\speechDemo\\build\\intermediates\\res\\merged\\debug\\layout\\understander.xml",
+        "source": "D:\\develop\\AndroidDevelop\\YeIWillGone\\speechDemo\\src\\main\\res\\layout\\understander.xml"
     }
 ]

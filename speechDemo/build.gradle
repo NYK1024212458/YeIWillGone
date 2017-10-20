@@ -29,4 +29,5 @@ dependencies {
     compile files('libs/Msc.jar')
     compile files('libs/Sunflower.jar')
     compile 'com.android.support:support-v4:23.+'
+
 }
