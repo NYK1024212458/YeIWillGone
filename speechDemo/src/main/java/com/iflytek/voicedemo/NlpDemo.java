@@ -214,6 +214,8 @@ public class NlpDemo extends Activity implements OnClickListener {
 							if ("nlp".equals(sub)) {
 								// 解析得到语义结果
 								String resultStr = cntJson.optString("intent");
+								
+								// // TODO: 2017/10/20  需要做的就是对获取的进行解析,最后播放出来   和listview的展示 
 
 
 								Log.i( TAG, resultStr );
