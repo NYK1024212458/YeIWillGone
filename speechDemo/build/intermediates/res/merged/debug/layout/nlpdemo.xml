@@ -28,6 +28,12 @@
     </LinearLayout>
 
     <ListView
+        android:layout_marginLeft="10.0dip"
+        android:layout_marginRight="10.0dip"
+        android:cacheColorHint="#00000000"
+        android:divider="@null"
+        android:dividerHeight="5dp"
+        android:scrollbars="none"
         android:id="@+id/lv_showmessage"
         android:layout_width="fill_parent"
         android:layout_height="0dip"
@@ -36,6 +42,7 @@
         android:paddingBottom="40dip">
 
     </ListView>
+
 
 
     <LinearLayout
@@ -64,7 +71,7 @@
             android:textSize="20sp" />
     </LinearLayout>
 
-    <Button
+   <!-- <Button
         android:id="@+id/text_nlp_start"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
@@ -72,6 +79,6 @@
         android:layout_marginLeft="10dip"
         android:layout_marginRight="10dip"
         android:text="文字查询"
-        android:textSize="20sp" />
+        android:textSize="20sp" />-->
 
 </LinearLayout>

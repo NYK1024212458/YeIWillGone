@@ -2,9 +2,9 @@ package com.iflytek.voicedemo;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.content.Context;
 import android.content.res.AssetManager;
 import android.os.Bundle;
-import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -13,20 +13,31 @@ import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Toast;
 
-import java.io.IOException;
-import java.io.InputStream;
-import org.json.JSONObject;
-
+import com.google.gson.Gson;
 import com.iflytek.aiui.AIUIAgent;
 import com.iflytek.aiui.AIUIConstant;
 import com.iflytek.aiui.AIUIEvent;
 import com.iflytek.aiui.AIUIListener;
 import com.iflytek.aiui.AIUIMessage;
-import com.iflytek.speech.util.FucUtil;
+
+import org.json.JSONObject;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+
+import adapter.ChatMsgViewAdapter;
+import enty.Answer;
+
+import enty.ChatMsgEntity;
 
 public class NlpDemo extends Activity implements OnClickListener {
 	private static String TAG = NlpDemo.class.getSimpleName();
 
+    private Context mContext;
 	private Toast mToast;	
 	private EditText mNlpText;
 	
@@ -34,12 +45,17 @@ public class NlpDemo extends Activity implements OnClickListener {
 	private int mAIUIState = AIUIConstant.STATE_IDLE;
 	private ListView lv_showmessage;
 
+
+    private ChatMsgViewAdapter mAdapter1;
+    private List<ChatMsgEntity> chatLists;
 	@SuppressLint("ShowToast")
 	public void onCreate(Bundle savedInstanceState)
 	{
 		super.onCreate(savedInstanceState);
 		this.requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.nlpdemo);
+        mContext= NlpDemo.this;
+        chatLists = new ArrayList<>();
 		initLayout();
 		
 		mToast = Toast.makeText(this, "", Toast.LENGTH_SHORT);
@@ -49,12 +65,15 @@ public class NlpDemo extends Activity implements OnClickListener {
 	 * 初始化Layout。
 	 */
 	private void initLayout(){
-		findViewById(R.id.text_nlp_start).setOnClickListener(this);
+		/*findViewById(R.id.text_nlp_start).setOnClickListener(this);*/
 		findViewById(R.id.nlp_start).setOnClickListener(this);
 
 		lv_showmessage = (ListView) findViewById(R.id.lv_showmessage);
 
 		findViewById(R.id.nlp_stop).setOnClickListener(this);
+
+
+
 
 	}
 	
@@ -67,10 +86,10 @@ public class NlpDemo extends Activity implements OnClickListener {
 		}
 		
 		switch (view.getId()) {
-		// 开始文本理解
+		/*// 开始文本理解
 		case R.id.text_nlp_start:
 			startTextNlp();
-			break;
+			break;*/
 		// 开始语音理解
 		case R.id.nlp_start:
 			startVoiceNlp();
@@ -126,7 +145,7 @@ public class NlpDemo extends Activity implements OnClickListener {
 	
 	private void startVoiceNlp(){
 		Log.i( TAG, "start voice nlp" );
-		mNlpText.setText("");
+		/*mNlpText.setText("");*/
 		
 		// 先发送唤醒消息，改变AIUI内部状态，只有唤醒状态才能接收语音输入
 		// 默认为oneshot 模式，即一次唤醒后就进入休眠，如果语音唤醒后，需要进行文本语义，请将改段逻辑copy至startTextNlp()开头处
@@ -207,8 +226,8 @@ public class NlpDemo extends Activity implements OnClickListener {
 							String cnt_id = content.getString("cnt_id");
 							JSONObject cntJson = new JSONObject(new String(event.data.getByteArray(cnt_id), "utf-8"));
 	
-							mNlpText.append( "\n" );
-							mNlpText.append(cntJson.toString());
+							/*mNlpText.append( "\n" );
+							mNlpText.append(cntJson.toString());*/
 							
 							String sub = params.optString("sub");
 							if ("nlp".equals(sub)) {
@@ -216,18 +235,48 @@ public class NlpDemo extends Activity implements OnClickListener {
 								String resultStr = cntJson.optString("intent");
 								
 								// // TODO: 2017/10/20  需要做的就是对获取的进行解析,最后播放出来   和listview的展示 
+                                //解析添加到bean上面
+                                Gson gson = new Gson();
+                                Answer answerBean = gson.fromJson(resultStr, Answer.class);
+                                String clinetSpeakTest = answerBean.answer.question.question;
+
+                                ChatMsgEntity chatMsgEntity = new ChatMsgEntity();
+                                chatMsgEntity.setMsgType(false);
+                                chatMsgEntity.setName("问题");
+                                chatMsgEntity.setDate(getSystemCurrentTimeOne());
+                                chatMsgEntity.setText(clinetSpeakTest);
+                                chatLists.add(chatMsgEntity);
+
+
+                                //  huida
+                                ChatMsgEntity chatMsgEntity1 = new ChatMsgEntity();
+                                String responseSpeakTest =answerBean.text;
+                                chatMsgEntity1.setMsgType(true);
+                                chatMsgEntity1.setName("回答");
+                                chatMsgEntity1.setDate(getSystemCurrentTimeOne());
+                                chatMsgEntity1.setText(responseSpeakTest);
+                                chatLists.add(chatMsgEntity1);
+
+                                //  刷新适配器
+
+                                initAdapter();
 
 
 								Log.i( TAG, resultStr );
-							}
+
+
+                            }
 						}
 					} catch (Throwable e) {
 						e.printStackTrace();
-						mNlpText.append( "\n" );
-						mNlpText.append( e.getLocalizedMessage() );
+						/*mNlpText.append( "\n" );
+						mNlpText.append( e.getLocalizedMessage() )*/;
 					}
 					
-					mNlpText.append( "\n" );
+					/*mNlpText.append( "\n" );*/
+
+
+
 				} break;
 	
 				case AIUIConstant.EVENT_ERROR: {
@@ -285,7 +334,22 @@ public class NlpDemo extends Activity implements OnClickListener {
 		}
 
 	};
- 
+
+    private void initAdapter() {
+        mAdapter1 = new ChatMsgViewAdapter(mContext, chatLists);
+        lv_showmessage.setAdapter(mAdapter1);
+    }
+
+
+    private String getSystemCurrentTimeOne() {
+        SimpleDateFormat formatter = new SimpleDateFormat("yyyy年MM月dd日   HH:mm:ss");
+        Date curDate = new Date(System.currentTimeMillis());
+        // 格式化时间\
+        String str = formatter.format(curDate);
+        //ToastUtils.showToast(getContext(), str);
+        return str;
+    }
+
     @Override
     protected void onDestroy() {
     	super.onDestroy();
@@ -310,4 +374,6 @@ public class NlpDemo extends Activity implements OnClickListener {
 			}
 		});
 	}
+
+
 }
