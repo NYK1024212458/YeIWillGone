@@ -8,6 +8,7 @@ import android.content.res.AssetManager;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
+import android.os.Message;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -69,7 +70,29 @@ public class NlpDemo extends Activity implements OnClickListener {
     private SharedPreferences mSharedPreferences;
 
     //  使用Handle来完成消息的分发
-    private Handler handler = new Handler();
+    private Handler mhandler  = new Handler(){
+        @Override
+        public void handleMessage(Message msg) {
+            if (msg.what==0x00){
+                // 喀什语音
+                //初始化播放
+                initTts();
+                int tTScode = mTts.startSpeaking(responseSpeakTest+"", mTtsListener);
+//			/**
+//			 * 只保存音频不进行播放接口,调用此接口请注释startSpeaking接口
+//			 * text:要合成的文本，uri:需要保存的音频全路径，listener:回调接口
+//			*/
+//			String path = Environment.getExternalStorageDirectory()+"/tts.pcm";
+//			int code = mTts.synthesizeToUri(text, path, mTtsListener);
+
+                if (tTScode != ErrorCode.SUCCESS) {
+                    showTip("语音合成失败,错误码: " + tTScode);
+                }
+
+                Toast.makeText(NlpDemo.this,"语音的handle的ok",Toast.LENGTH_SHORT).show();
+            }
+        }
+    };
 
     // 缓冲进度
     private int mPercentForBuffering = 0;
@@ -87,8 +110,7 @@ public class NlpDemo extends Activity implements OnClickListener {
         initLayout();
         mToast = Toast.makeText(this, "", Toast.LENGTH_SHORT);
         mSharedPreferences = getSharedPreferences(TtsSettings.PREFER_NAME, MODE_PRIVATE);
-        //初始化播放
-        initTts();
+
 
     }
 
@@ -111,17 +133,6 @@ public class NlpDemo extends Activity implements OnClickListener {
                 // 初始化成功，之后可以调用startSpeaking方法
                 // 注：有的开发者在onCreate方法中创建完合成对象之后马上就调用startSpeaking进行合成，
                 // 正确的做法是将onCreate中的startSpeaking调用移至这里
-                int tTScode = mTts.startSpeaking(responseSpeakTest, mTtsListener);
-//			/**
-//			 * 只保存音频不进行播放接口,调用此接口请注释startSpeaking接口
-//			 * text:要合成的文本，uri:需要保存的音频全路径，listener:回调接口
-//			*/
-//			String path = Environment.getExternalStorageDirectory()+"/tts.pcm";
-//			int code = mTts.synthesizeToUri(text, path, mTtsListener);
-
-                if (tTScode != ErrorCode.SUCCESS) {
-                    showTip("语音合成失败,错误码: " + code);
-                }
 
 
             }
@@ -379,6 +390,8 @@ public class NlpDemo extends Activity implements OnClickListener {
                                 chatMsgEntity1.setDate(getSystemCurrentTimeOne());
                                 chatMsgEntity1.setText(responseSpeakTest);
                                 chatLists.add(chatMsgEntity1);
+
+                                mhandler.sendEmptyMessage(0x00);
 
                                 //  刷新适配器
 
