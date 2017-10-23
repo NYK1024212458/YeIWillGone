@@ -32,6 +32,10 @@
         "source": "D:\\develop\\AndroidDevelop\\YeIWillGone\\speechDemo\\src\\main\\res\\layout\\title.xml"
     },
     {
+        "merged": "D:\\develop\\AndroidDevelop\\YeIWillGone\\speechDemo\\build\\intermediates\\res\\merged\\debug\\layout\\chatting_item_msg_text_right.xml",
+        "source": "D:\\develop\\AndroidDevelop\\YeIWillGone\\speechDemo\\src\\main\\res\\layout\\chatting_item_msg_text_right.xml"
+    },
+    {
         "merged": "D:\\develop\\AndroidDevelop\\YeIWillGone\\speechDemo\\build\\intermediates\\res\\merged\\debug\\layout\\isrdemo.xml",
         "source": "D:\\develop\\AndroidDevelop\\YeIWillGone\\speechDemo\\src\\main\\res\\layout\\isrdemo.xml"
     },
@@ -42,6 +46,10 @@
     {
         "merged": "D:\\develop\\AndroidDevelop\\YeIWillGone\\speechDemo\\build\\intermediates\\res\\merged\\debug\\layout\\ttsdemo.xml",
         "source": "D:\\develop\\AndroidDevelop\\YeIWillGone\\speechDemo\\src\\main\\res\\layout\\ttsdemo.xml"
+    },
+    {
+        "merged": "D:\\develop\\AndroidDevelop\\YeIWillGone\\speechDemo\\build\\intermediates\\res\\merged\\debug\\layout\\chatting_item_msg_text_left.xml",
+        "source": "D:\\develop\\AndroidDevelop\\YeIWillGone\\speechDemo\\src\\main\\res\\layout\\chatting_item_msg_text_left.xml"
     },
     {
         "merged": "D:\\AndroidDevelop\\AS\\YeIWillGone\\speechDemo\\build\\intermediates\\res\\merged\\debug\\layout\\title.xml",

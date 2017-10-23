@@ -1786,8 +1786,71 @@
                     "startColumn": 4,
                     "startOffset": 6199,
                     "endLine": 166,
+                    "endColumn": 12,
+                    "endOffset": 6675
+                },
+                "from": {
+                    "file": "D:\\develop\\AndroidDevelop\\YeIWillGone\\speechDemo\\src\\main\\res\\values\\styles.xml",
+                    "position": {
+                        "startLine": 23,
+                        "startColumn": 4,
+                        "startOffset": 891,
+                        "endLine": 32,
+                        "endColumn": 12,
+                        "endOffset": 1376
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 167,
+                    "startColumn": 4,
+                    "startOffset": 6680,
+                    "endLine": 172,
+                    "endColumn": 12,
+                    "endOffset": 6935
+                },
+                "from": {
+                    "file": "D:\\develop\\AndroidDevelop\\YeIWillGone\\speechDemo\\src\\main\\res\\values\\styles.xml",
+                    "position": {
+                        "startLine": 15,
+                        "startColumn": 4,
+                        "startOffset": 621,
+                        "endLine": 20,
+                        "endColumn": 12,
+                        "endOffset": 881
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 173,
+                    "startColumn": 4,
+                    "startOffset": 6940,
+                    "endLine": 177,
+                    "endColumn": 12,
+                    "endOffset": 7143
+                },
+                "from": {
+                    "file": "D:\\develop\\AndroidDevelop\\YeIWillGone\\speechDemo\\src\\main\\res\\values\\styles.xml",
+                    "position": {
+                        "startLine": 35,
+                        "startColumn": 4,
+                        "startOffset": 1386,
+                        "endLine": 39,
+                        "endColumn": 12,
+                        "endOffset": 1593
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 178,
+                    "startColumn": 4,
+                    "startOffset": 7148,
+                    "endLine": 187,
                     "endColumn": 9,
-                    "endOffset": 6723
+                    "endOffset": 7672
                 },
                 "from": {
                     "file": "D:\\develop\\AndroidDevelop\\YeIWillGone\\speechDemo\\src\\main\\res\\values\\styles.xml",
