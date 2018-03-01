@@ -69,7 +69,7 @@ Field and method binding for Android views which uses annotation processing to g
 (Android视图的字段和方法绑定，它使用注释处理为您生成样板代码。)
 
 
- 1.    Eliminate findViewById calls by using @BindView on fields.(Eliminate就是消除的意思---大体就是消除了FindViewByID 使用注解@bingview来替代)
+1.    Eliminate findViewById calls by using @BindView on fields.(Eliminate就是消除的意思---大体就是消除了FindViewByID 使用注解@bingview来替代)
 1.     Group multiple views in a list or array. Operate on all of them at once with actions, setters, or properties.(在列表或数组中组合多个视图。使用action、setter或properties对它们进行操作。)
 1.     Eliminate anonymous inner-classes for listeners by annotating methods with @OnClick and others.(通过@ onclick和其他的注解方法消除匿名的内部类。)
 1.     Eliminate resource lookups by using resource annotations on fields.(在字段上使用资源注释消除资源查找。)

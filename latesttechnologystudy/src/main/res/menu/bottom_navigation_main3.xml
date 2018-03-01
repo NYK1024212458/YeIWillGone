@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_favorites"
+        android:enabled="true"
+        android:icon="@mipmap/canvas"
+        android:title="@string/text_favorites"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_schedules"
+        android:enabled="true"
+        android:icon="@mipmap/canvas"
+        android:title="@string/text_schedules"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_music"
+        android:enabled="true"
+        android:icon="@mipmap/canvas"
+        android:title="@string/text_music"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_sport"
+        android:enabled="true"
+        android:icon="@mipmap/transportation_color_moto"
+        android:title="@string/text_music"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_sport1"
+        android:enabled="true"
+        android:icon="@mipmap/transportation_color_moto"
+        android:title="@string/text_music"
+        app:showAsAction="ifRoom" />
+
+
+</menu>

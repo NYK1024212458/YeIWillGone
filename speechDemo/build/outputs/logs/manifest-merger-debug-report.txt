@@ -1,6 +1,18 @@
 -- Merging decision tree log ---
 manifest
 ADDED from D:\develop\AndroidDevelop\YeIWillGone\speechDemo\src\main\AndroidManifest.xml:2:1-85:12
+INJECTED from D:\develop\AndroidDevelop\YeIWillGone\speechDemo\src\main\AndroidManifest.xml:2:1-85:12
+INJECTED from D:\develop\AndroidDevelop\YeIWillGone\speechDemo\src\main\AndroidManifest.xml:2:1-85:12
+INJECTED from D:\develop\AndroidDevelop\YeIWillGone\speechDemo\src\main\AndroidManifest.xml:2:1-85:12
+MERGED from [com.android.support:support-v4:26.0.2] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\support-v4-26.0.2.aar\ac5e6ae35eafd43c1f0615f5b65e7583\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-media-compat:26.0.2] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.0.2.aar\9a0e66964bde3b94ad55de676bbac186\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-fragment:26.0.2] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\support-fragment-26.0.2.aar\33bf67cc7eacba8464c966b982a25e4d\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-core-utils:26.0.2] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.0.2.aar\a6c3ebbca58bb1e1be2e8702c1135ecf\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-core-ui:26.0.2] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.0.2.aar\9f25cddaa5ad105d445b92c2cf41fc3a\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-compat:26.0.2] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\support-compat-26.0.2.aar\6820514bdab3d6cca3c004898103e137\AndroidManifest.xml:17:1-31:12
+INJECTED from D:\develop\AndroidDevelop\YeIWillGone\speechDemo\src\main\AndroidManifest.xml:2:1-85:12
+INJECTED from D:\develop\AndroidDevelop\YeIWillGone\speechDemo\src\main\AndroidManifest.xml:2:1-85:12
+INJECTED from D:\develop\AndroidDevelop\YeIWillGone\speechDemo\src\main\AndroidManifest.xml:2:1-85:12
 	package
 		ADDED from D:\develop\AndroidDevelop\YeIWillGone\speechDemo\src\main\AndroidManifest.xml:3:5-36
 		INJECTED from D:\develop\AndroidDevelop\YeIWillGone\speechDemo\src\main\AndroidManifest.xml
@@ -9,15 +21,26 @@ ADDED from D:\develop\AndroidDevelop\YeIWillGone\speechDemo\src\main\AndroidMani
 		ADDED from D:\develop\AndroidDevelop\YeIWillGone\speechDemo\src\main\AndroidManifest.xml:5:5-40
 		INJECTED from D:\develop\AndroidDevelop\YeIWillGone\speechDemo\src\main\AndroidManifest.xml
 		INJECTED from D:\develop\AndroidDevelop\YeIWillGone\speechDemo\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from D:\develop\AndroidDevelop\YeIWillGone\speechDemo\src\main\AndroidManifest.xml:2:11-69
 	android:versionCode
 		ADDED from D:\develop\AndroidDevelop\YeIWillGone\speechDemo\src\main\AndroidManifest.xml:4:5-28
 		INJECTED from D:\develop\AndroidDevelop\YeIWillGone\speechDemo\src\main\AndroidManifest.xml
 		INJECTED from D:\develop\AndroidDevelop\YeIWillGone\speechDemo\src\main\AndroidManifest.xml
-	xmlns:android
-		ADDED from D:\develop\AndroidDevelop\YeIWillGone\speechDemo\src\main\AndroidManifest.xml:2:11-69
 application
 ADDED from D:\develop\AndroidDevelop\YeIWillGone\speechDemo\src\main\AndroidManifest.xml:7:5-69:19
-MERGED from [com.android.support:support-v4:23.4.0] D:\develop\AndroidDevelop\YeIWillGone\speechDemo\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:26.0.2] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\support-v4-26.0.2.aar\ac5e6ae35eafd43c1f0615f5b65e7583\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-v4:26.0.2] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\support-v4-26.0.2.aar\ac5e6ae35eafd43c1f0615f5b65e7583\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-media-compat:26.0.2] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.0.2.aar\9a0e66964bde3b94ad55de676bbac186\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-media-compat:26.0.2] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.0.2.aar\9a0e66964bde3b94ad55de676bbac186\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-fragment:26.0.2] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\support-fragment-26.0.2.aar\33bf67cc7eacba8464c966b982a25e4d\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-fragment:26.0.2] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\support-fragment-26.0.2.aar\33bf67cc7eacba8464c966b982a25e4d\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-utils:26.0.2] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.0.2.aar\a6c3ebbca58bb1e1be2e8702c1135ecf\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-utils:26.0.2] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.0.2.aar\a6c3ebbca58bb1e1be2e8702c1135ecf\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-ui:26.0.2] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.0.2.aar\9f25cddaa5ad105d445b92c2cf41fc3a\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-ui:26.0.2] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.0.2.aar\9f25cddaa5ad105d445b92c2cf41fc3a\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-compat:26.0.2] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\support-compat-26.0.2.aar\6820514bdab3d6cca3c004898103e137\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-compat:26.0.2] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\support-compat-26.0.2.aar\6820514bdab3d6cca3c004898103e137\AndroidManifest.xml:25:5-29:19
 	android:label
 		ADDED from D:\develop\AndroidDevelop\YeIWillGone\speechDemo\src\main\AndroidManifest.xml:10:9-29
 	android:icon
@@ -120,9 +143,27 @@ ADDED from D:\develop\AndroidDevelop\YeIWillGone\speechDemo\src\main\AndroidMani
 		ADDED from D:\develop\AndroidDevelop\YeIWillGone\speechDemo\src\main\AndroidManifest.xml:65:13-43
 uses-sdk
 ADDED from D:\develop\AndroidDevelop\YeIWillGone\speechDemo\src\main\AndroidManifest.xml:71:5-43
-MERGED from [com.android.support:support-v4:23.4.0] D:\develop\AndroidDevelop\YeIWillGone\speechDemo\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\AndroidManifest.xml:20:5-43
+INJECTED from D:\develop\AndroidDevelop\YeIWillGone\speechDemo\src\main\AndroidManifest.xml:71:5-43
+INJECTED from D:\develop\AndroidDevelop\YeIWillGone\speechDemo\src\main\AndroidManifest.xml:71:5-43
+MERGED from [com.android.support:support-v4:26.0.2] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\support-v4-26.0.2.aar\ac5e6ae35eafd43c1f0615f5b65e7583\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-v4:26.0.2] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\support-v4-26.0.2.aar\ac5e6ae35eafd43c1f0615f5b65e7583\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-media-compat:26.0.2] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.0.2.aar\9a0e66964bde3b94ad55de676bbac186\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-media-compat:26.0.2] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.0.2.aar\9a0e66964bde3b94ad55de676bbac186\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-fragment:26.0.2] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\support-fragment-26.0.2.aar\33bf67cc7eacba8464c966b982a25e4d\AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-fragment:26.0.2] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\support-fragment-26.0.2.aar\33bf67cc7eacba8464c966b982a25e4d\AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-core-utils:26.0.2] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.0.2.aar\a6c3ebbca58bb1e1be2e8702c1135ecf\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-core-utils:26.0.2] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.0.2.aar\a6c3ebbca58bb1e1be2e8702c1135ecf\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-core-ui:26.0.2] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.0.2.aar\9f25cddaa5ad105d445b92c2cf41fc3a\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-ui:26.0.2] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.0.2.aar\9f25cddaa5ad105d445b92c2cf41fc3a\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:26.0.2] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\support-compat-26.0.2.aar\6820514bdab3d6cca3c004898103e137\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:26.0.2] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\support-compat-26.0.2.aar\6820514bdab3d6cca3c004898103e137\AndroidManifest.xml:21:5-23:58
+INJECTED from D:\develop\AndroidDevelop\YeIWillGone\speechDemo\src\main\AndroidManifest.xml:71:5-43
+INJECTED from D:\develop\AndroidDevelop\YeIWillGone\speechDemo\src\main\AndroidManifest.xml:71:5-43
+	tools:overrideLibrary
+		ADDED from [com.android.support:support-v4:26.0.2] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\support-v4-26.0.2.aar\ac5e6ae35eafd43c1f0615f5b65e7583\AndroidManifest.xml:23:9-51
 	android:targetSdkVersion
 		INJECTED from D:\develop\AndroidDevelop\YeIWillGone\speechDemo\src\main\AndroidManifest.xml
+		ADDED from D:\develop\AndroidDevelop\YeIWillGone\speechDemo\src\main\AndroidManifest.xml:71:5-43
 		INJECTED from D:\develop\AndroidDevelop\YeIWillGone\speechDemo\src\main\AndroidManifest.xml
 	android:minSdkVersion
 		ADDED from D:\develop\AndroidDevelop\YeIWillGone\speechDemo\src\main\AndroidManifest.xml:71:15-40
@@ -172,3 +213,19 @@ uses-permission#android.permission.READ_EXTERNAL_STORAGE
 ADDED from D:\develop\AndroidDevelop\YeIWillGone\speechDemo\src\main\AndroidManifest.xml:83:2-77
 	android:name
 		ADDED from D:\develop\AndroidDevelop\YeIWillGone\speechDemo\src\main\AndroidManifest.xml:83:19-74
+meta-data#android.support.VERSION
+ADDED from [com.android.support:support-v4:26.0.2] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\support-v4-26.0.2.aar\ac5e6ae35eafd43c1f0615f5b65e7583\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-media-compat:26.0.2] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.0.2.aar\9a0e66964bde3b94ad55de676bbac186\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-media-compat:26.0.2] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.0.2.aar\9a0e66964bde3b94ad55de676bbac186\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-fragment:26.0.2] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\support-fragment-26.0.2.aar\33bf67cc7eacba8464c966b982a25e4d\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-fragment:26.0.2] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\support-fragment-26.0.2.aar\33bf67cc7eacba8464c966b982a25e4d\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-utils:26.0.2] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.0.2.aar\a6c3ebbca58bb1e1be2e8702c1135ecf\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-utils:26.0.2] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.0.2.aar\a6c3ebbca58bb1e1be2e8702c1135ecf\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-ui:26.0.2] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.0.2.aar\9f25cddaa5ad105d445b92c2cf41fc3a\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-ui:26.0.2] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.0.2.aar\9f25cddaa5ad105d445b92c2cf41fc3a\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-compat:26.0.2] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\support-compat-26.0.2.aar\6820514bdab3d6cca3c004898103e137\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-compat:26.0.2] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\support-compat-26.0.2.aar\6820514bdab3d6cca3c004898103e137\AndroidManifest.xml:26:9-28:38
+	android:value
+		ADDED from [com.android.support:support-v4:26.0.2] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\support-v4-26.0.2.aar\ac5e6ae35eafd43c1f0615f5b65e7583\AndroidManifest.xml:28:13-35
+	android:name
+		ADDED from [com.android.support:support-v4:26.0.2] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\support-v4-26.0.2.aar\ac5e6ae35eafd43c1f0615f5b65e7583\AndroidManifest.xml:27:13-51

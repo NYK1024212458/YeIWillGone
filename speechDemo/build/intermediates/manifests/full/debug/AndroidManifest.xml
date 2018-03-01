@@ -5,8 +5,8 @@
     android:versionName="2.0.1018.1013" >
 
     <uses-sdk
-        android:minSdkVersion="9"
-        android:targetSdkVersion="23" />
+        android:minSdkVersion="15"
+        android:targetSdkVersion="26" />
 
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -22,6 +22,7 @@
 
     <application
         android:name="com.iflytek.voicedemo.SpeechApp"
+        android:debuggable="true"
         android:icon="@drawable/icon"
         android:label="智能陪伴" >
         <activity
@@ -79,6 +80,9 @@
         <meta-data
             android:name="IFLYTEK_CHANNEL"
             android:value="Android_Demo" />
+        <meta-data
+            android:name="android.support.VERSION"
+            android:value="26.0.2" />
     </application>
 
 </manifest>
