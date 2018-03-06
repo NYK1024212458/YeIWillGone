@@ -24,6 +24,7 @@ import java.util.List;
 
 /**
  * Created by Administrator on 2018/3/1.
+ * retrofit的使用要在这周写完
  */
 
 public class BottomViewpageActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener, ViewPager.OnPageChangeListener {
@@ -92,9 +93,23 @@ public class BottomViewpageActivity extends AppCompatActivity implements BottomN
         // 是否展示toolbar
         custom_toolbar.isShowToolbar(true);
 
-        // 沉浸的实现
-       ImmersionBar.with(this).init();
 
+
+       // 我们队viewpage进行实现
+        ImmersionBarINIt();
+
+    }
+private boolean isSimpleInit =false;
+    private void ImmersionBarINIt() {
+
+        if (isSimpleInit){
+            // 沉浸的实现
+            ImmersionBar.with(this).init();
+        }else {
+
+            // 对viewpage的实现
+
+        }
     }
 
     private int mCurrentPostion = 0;
