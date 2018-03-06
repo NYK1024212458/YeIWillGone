@@ -95,6 +95,7 @@ public class BottomViewpageActivity extends AppCompatActivity implements BottomN
 
 
 
+
        // 我们队viewpage进行实现
         ImmersionBarINIt();
 
