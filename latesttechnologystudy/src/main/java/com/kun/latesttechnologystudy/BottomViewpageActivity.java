@@ -8,12 +8,17 @@ import android.support.design.widget.BottomNavigationView;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.Window;
 
+import com.kun.latesttechnologystudy.adapter.VPFragmentStusAdapter;
 import com.kun.latesttechnologystudy.adapter.VgAdapter;
+import com.kun.latesttechnologystudy.adapter.ViewPagerPageAdapter;
 import com.kun.latesttechnologystudy.fragment.Own1Fragment;
 import com.kun.latesttechnologystudy.fragment.Own2Fragment;
 import com.kun.latesttechnologystudy.fragment.Own3Fragment;
 import com.kun.latesttechnologystudy.fragment.Own4Fragment;
+import com.kun.latesttechnologystudy.view.CustomToolbar;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -28,10 +33,12 @@ public class BottomViewpageActivity extends AppCompatActivity implements BottomN
     private BottomNavigationView bottom_main5;
     private ViewPager mVg_bvg;
     private List list;
+    private CustomToolbar custom_toolbar;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+     //   requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_bottomviewpage);
         mContext = BottomViewpageActivity.this;
         initView();
@@ -53,6 +60,11 @@ public class BottomViewpageActivity extends AppCompatActivity implements BottomN
         list.add(own3Fragment);
         list.add(own4Fragment);
 
+
+        // custom_toolbar的初始化
+        custom_toolbar = (CustomToolbar) findViewById(R.id.custom_toolbar);
+
+
     }
 
     private void initEvent() {
@@ -64,16 +76,29 @@ public class BottomViewpageActivity extends AppCompatActivity implements BottomN
         bottom_main5.setOnNavigationItemSelectedListener(this);
 
         //设置adapter
-        VgAdapter mVgAdapter = new VgAdapter(getSupportFragmentManager(), list);
-        mVg_bvg.setAdapter(mVgAdapter);
+        /*VgAdapter mVgAdapter = new VgAdapter(getSupportFragmentManager(), list);
+        mVg_bvg.setAdapter(mVgAdapter);*/
 
 
-        // 设置Pageradapter
-
+        // 设置FragmentStusPageAdapter
+        VPFragmentStusAdapter vpFragmentStusAdapter = new VPFragmentStusAdapter(getSupportFragmentManager(),list);
+        mVg_bvg.setAdapter(vpFragmentStusAdapter);
 
 
         // 设置viewpage的滑动的监听
         mVg_bvg.addOnPageChangeListener(this);
+
+        // 设置搜索的展示
+       /* //  custom_toolbar 的设置
+        custom_toolbar.hideTitleView();
+        custom_toolbar.showSearchView();*/
+
+        // 是否展示toolbar
+        custom_toolbar.isShowToolbar(true);
+
+
+
+
     }
 
     private int mCurrentPostion = 0;

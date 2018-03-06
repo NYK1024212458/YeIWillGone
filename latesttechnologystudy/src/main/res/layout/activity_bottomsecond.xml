@@ -4,16 +4,23 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
-
-    <FrameLayout
-        android:id="@+id/fl_main_contain"
-        android:layout_above="@id/bottom_navigation1"
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-
-
-    </FrameLayout>
+        android:layout_height="wrap_content">
+        <!--使用Viewstub来实现按需加载-->
+        <ViewStub
+            android:layout="@layout/toolbar"
+            android:id="@+id/vb_mian_show"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"/>
+        <FrameLayout
+            android:id="@+id/fl_main_contain"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+        </FrameLayout>
+    </LinearLayout>
 
     <android.support.design.widget.BottomNavigationView
         android:id="@+id/bottom_frgament"

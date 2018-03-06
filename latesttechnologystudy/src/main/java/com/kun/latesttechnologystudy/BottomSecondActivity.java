@@ -12,6 +12,7 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewStub;
 import android.widget.FrameLayout;
 
 import com.kun.latesttechnologystudy.fragment.Own1Fragment;
@@ -28,6 +29,10 @@ public class BottomSecondActivity extends AppCompatActivity {
 
     private Context mContext;
     private Own1Fragment own1Fragment;
+
+    private ViewStub vb_mian_show;
+    private boolean isLoading = true;
+
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -56,6 +61,14 @@ public class BottomSecondActivity extends AppCompatActivity {
         // 创建fragment
         own1Fragment = new Own1Fragment(mContext);
         getSupportFragmentManager().beginTransaction().replace(R.id.fl_main_contain, own1Fragment).commit();
+
+
+        // 初始化 viewstub
+        vb_mian_show = (ViewStub) findViewById(R.id.vb_mian_show);
+        //设置
+        if (isLoading){
+            vb_mian_show.inflate();  // viewStub智能inflate一次,inflate的对象是一个布局不是一个view
+        }
     }
 
     /**
