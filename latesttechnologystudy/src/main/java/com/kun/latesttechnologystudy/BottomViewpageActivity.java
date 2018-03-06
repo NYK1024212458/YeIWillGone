@@ -171,6 +171,7 @@ private boolean isSimpleInit =false;
 
     @Override
     public void onPageScrollStateChanged(int state) {
+
         //状态变化
 
     }
