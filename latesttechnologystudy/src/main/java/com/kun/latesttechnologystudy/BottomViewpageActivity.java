@@ -94,8 +94,6 @@ public class BottomViewpageActivity extends AppCompatActivity implements BottomN
         custom_toolbar.isShowToolbar(true);
 
 
-
-
        // 我们队viewpage进行实现
         ImmersionBarINIt();
 
@@ -109,6 +107,10 @@ private boolean isSimpleInit =false;
         }else {
 
             // 对viewpage的实现
+
+            //先实现的是对github和oschina的同步的推送
+
+
 
         }
     }
