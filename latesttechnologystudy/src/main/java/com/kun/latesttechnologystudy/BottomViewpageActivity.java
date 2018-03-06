@@ -8,12 +8,11 @@ import android.support.design.widget.BottomNavigationView;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
-import android.view.View;
-import android.view.Window;
 
+
+import com.gyf.barlibrary.ImmersionBar;
 import com.kun.latesttechnologystudy.adapter.VPFragmentStusAdapter;
-import com.kun.latesttechnologystudy.adapter.VgAdapter;
-import com.kun.latesttechnologystudy.adapter.ViewPagerPageAdapter;
+
 import com.kun.latesttechnologystudy.fragment.Own1Fragment;
 import com.kun.latesttechnologystudy.fragment.Own2Fragment;
 import com.kun.latesttechnologystudy.fragment.Own3Fragment;
@@ -60,11 +59,8 @@ public class BottomViewpageActivity extends AppCompatActivity implements BottomN
         list.add(own3Fragment);
         list.add(own4Fragment);
 
-
         // custom_toolbar的初始化
         custom_toolbar = (CustomToolbar) findViewById(R.id.custom_toolbar);
-
-
     }
 
     private void initEvent() {
@@ -96,8 +92,8 @@ public class BottomViewpageActivity extends AppCompatActivity implements BottomN
         // 是否展示toolbar
         custom_toolbar.isShowToolbar(true);
 
-
-
+        // 沉浸的实现
+       ImmersionBar.with(this).init();
 
     }
 
