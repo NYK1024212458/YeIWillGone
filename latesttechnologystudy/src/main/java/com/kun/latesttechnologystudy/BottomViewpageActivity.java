@@ -179,5 +179,6 @@ private boolean isSimpleInit =false;
     protected void onDestroy() {
         super.onDestroy();
         ImmersionBar.with(this).destroy();   // 开始销毁
+
     }
 }
