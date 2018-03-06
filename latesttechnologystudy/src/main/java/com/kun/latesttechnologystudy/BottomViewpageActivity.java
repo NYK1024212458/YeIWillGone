@@ -180,5 +180,7 @@ private boolean isSimpleInit =false;
         super.onDestroy();
         ImmersionBar.with(this).destroy();   // 开始销毁
 
+
+
     }
 }
