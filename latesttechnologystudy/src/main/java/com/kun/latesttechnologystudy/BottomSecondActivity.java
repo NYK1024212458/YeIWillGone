@@ -15,7 +15,10 @@ import android.view.View;
 import android.view.ViewStub;
 import android.widget.FrameLayout;
 
+import com.gyf.barlibrary.ImmersionBar;
 import com.kun.latesttechnologystudy.fragment.Own1Fragment;
+import com.kun.latesttechnologystudy.fragment.Own2Fragment;
+import com.kun.latesttechnologystudy.fragment.Own3Fragment;
 
 /**
  * Created by Administrator on 2018/3/1.
@@ -32,6 +35,8 @@ public class BottomSecondActivity extends AppCompatActivity {
 
     private ViewStub vb_mian_show;
     private boolean isLoading = true;
+    private Own2Fragment own2Fragment;
+    private Own3Fragment own3Fragment;
 
 
     @Override
@@ -40,9 +45,7 @@ public class BottomSecondActivity extends AppCompatActivity {
         setContentView(R.layout.activity_bottomsecond);
         mContext = BottomSecondActivity.this;
 
-
         initView();
-
         initEvent();
 
     }
@@ -60,6 +63,9 @@ public class BottomSecondActivity extends AppCompatActivity {
 
         // 创建fragment
         own1Fragment = new Own1Fragment(mContext);
+        own2Fragment = new Own2Fragment(mContext);
+        own3Fragment = new Own3Fragment(mContext);
+
         getSupportFragmentManager().beginTransaction().replace(R.id.fl_main_contain, own1Fragment).commit();
 
 
@@ -83,14 +89,19 @@ public class BottomSecondActivity extends AppCompatActivity {
                     case R.id.action_favorites4:
                         // 点击的时候切换的 就是我们的FrameLayout
                         getSupportFragmentManager().beginTransaction().replace(R.id.fl_main_contain, own1Fragment).commit();
+
+
                         return true;
                     // break;
                     case R.id.action_launcher4:
-                        getSupportFragmentManager().beginTransaction().replace(R.id.fl_main_contain, own1Fragment).commit();
+                        getSupportFragmentManager().beginTransaction().replace(R.id.fl_main_contain, own2Fragment).commit();
+
                         return true;
                     // break;
                     case R.id.action_music4:
-                        getSupportFragmentManager().beginTransaction().replace(R.id.fl_main_contain, own1Fragment).commit();
+                        getSupportFragmentManager().beginTransaction().replace(R.id.fl_main_contain, own3Fragment).commit();
+
+
                         return true;
                     // break;
                     case R.id.action_sport4:

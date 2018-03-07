@@ -10,12 +10,16 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.gyf.barlibrary.ImmersionBar;
+import com.gyf.barlibrary.ImmersionFragment;
+import com.kun.latesttechnologystudy.R;
+
 /**
  * Created by Administrator on 2018/3/1.
  */
 
 @SuppressLint("ValidFragment")
-public class Own2Fragment extends Fragment {
+public class Own2Fragment extends ImmersionFragment {
     private Context mContext;
     @Nullable
     @Override
@@ -30,4 +34,16 @@ public class Own2Fragment extends Fragment {
     public Own2Fragment(Context context) {
         mContext = context;
     }
+
+    @Override
+    protected void immersionInit() {
+        //  我们不进行沉浸式
+      /*  ImmersionBar.with(this)
+                .statusBarDarkFont(true)
+                .navigationBarColor(R.color.yellow)
+                .init();*/
+    }
+
+
+
 }
